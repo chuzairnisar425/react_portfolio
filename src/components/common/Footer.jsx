@@ -23,9 +23,9 @@ export const Footer = () => {
           </div>
           <div className="copy-text">
             <p>
-              &copy; 2024 All rights reserved by
+              &copy; 2024 All rights reserved by 
               <a href="#" target="_blank">
-                gorkcoder
+                uzairDev
               </a>
             </p>
           </div>

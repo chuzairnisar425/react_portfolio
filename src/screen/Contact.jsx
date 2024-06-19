@@ -5,9 +5,9 @@ import { CiLocationOn } from "react-icons/ci";
 
 export const Contact = () => {
   const [contactInfo, setContactInfo] = useState({
-    phone: "+01 123 654 8096",
-    email: "gerolddesign@mail.com",
-    address: "Warne Park Street Pine, FL 33157, New York",
+    phone: "+923036911226",
+    email: "uzair.nisar425@gmail.com",
+    address: "Faisalabad, Pakistan",
   });
 
   useEffect(() => {
@@ -15,9 +15,9 @@ export const Contact = () => {
     const fetchContactInfo = async () => {
       // Simulated data
       const dummyData = {
-        phone: "+01 123 654 8096",
-        email: "gerolddesign@mail.com",
-        address: "Warne Park Street Pine, FL 33157, New York",
+        phone: "+923036911226",
+        email: "uzair.nisar425@gmail.com",
+        address: "Faisalabad, Pakistan",
       };
 
       // Simulate delay for fetching

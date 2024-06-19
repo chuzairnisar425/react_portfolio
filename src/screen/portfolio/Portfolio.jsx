@@ -17,7 +17,7 @@ export const Portfolio = () => {
               <button>All</button>
               <button>UX/UI</button>
               <button>Branding</button>
-              <button>Apps</button>
+              <button>Websites</button>
               <div className="active-bg"></div>
             </div>
           </div>

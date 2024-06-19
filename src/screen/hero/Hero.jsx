@@ -54,9 +54,7 @@ export const Hero = () => {
                     {socialIcons.map((icon, index) => (
                       <li key={index}>
                         <a href="https://twitter.com/ChUzair542">{icon.icon}</a>
-                        <a href="https://www.linkedin.com/in/muhammad-uzair-nisar-629490248/">{icon.icon}</a>
-                        <a href="https://github.com/chuzairnisar425">{icon.icon}</a>
-                      </li>
+                                          </li>
                     ))}
                   </ul>
                 </div>

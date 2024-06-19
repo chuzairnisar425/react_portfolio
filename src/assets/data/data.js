@@ -11,23 +11,24 @@ export const hero = [
   {
     id: 1,
     title: "Years of Experience",
-    text: "15",
+    text: "1",
   },
   {
     id: 2,
     title: "Project Completed",
-    text: "50+",
+    text: "25+",
   },
   {
     id: 3,
     title: "Happy Clients",
-    text: "1.5K",
+    text: "3",
   },
   {
     id: 4,
     title: "Years of Experience",
-    text: "14",
+    text: "1",
   },
+  
 ];
 export const service = [
   {
@@ -94,55 +95,45 @@ export const projects = [
 export const experienceData = [
   {
     id: 1,
-    time: "2022 - Present",
-    title: "Lead Developer",
-    institute: "Blockdots, London",
+    time: "June'2024 - Present",
+    title: "Web Developer",
+    institute: "Part-Time Job at Appium Logics Solution, Remote",
   },
   {
     id: 2,
-    time: "2021 - 2022",
-    title: "Full Stack Web Developer",
-    institute: "Parsons, The New School",
+    time: "May'2022 - August'2022",
+    title: "Frontend Developer",
+    institute: "Intern at  Bytewise Limited Private, Remote",
   },
   {
     id: 3,
-    time: "2020 - 2021",
+    time: "October'2021 - December'2021",
     title: "UI Designer",
-    institute: "House of Life, Leeds",
+    institute: "Remote, Pakistan",
   },
-  {
-    id: 4,
-    time: "2018 - 2020",
-    title: "Junior Graphics Designer",
-    institute: "Theme Junction, Bursa",
-  },
+ 
 ];
 
 export const educationData = [
   {
     id: 1,
-    time: "2020 - 2023",
-    title: "Programming course",
-    institute: "Harverd University",
+    time: "2021 - 2025",
+    title: "BS IN Software Engineering",
+    institute: "NUML,ISLAMABAD",
   },
   {
     id: 2,
-    time: "2016 - 2020",
-    title: "Graphic design course",
-    institute: "University of Denmark",
+    time: "2018 - 2020",
+    title: "Fsc Pre Eng",
+    institute: "PAEC Model College,Jauharabad",
   },
   {
     id: 3,
-    time: "2012 - 2015",
-    title: "Web design course",
-    institute: "University of California",
+    time: "2016 - 2018",
+    title: "Matric",
+    institute: "PAEC Model School,Jauharabad",
   },
-  {
-    id: 4,
-    time: "2010 - 2011",
-    title: "Design & Technology",
-    institute: "Parsons, The New School",
-  },
+ 
 ];
 
 export const skillsData = [
