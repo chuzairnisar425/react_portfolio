@@ -1,10 +1,10 @@
 export const linklist = [
   { id: 0, text: "Home", link: "/" },
   { id: 1, text: "Services", link: "/service" },
-  { id: 2, text: "Works", link: "/work" },
+  // { id: 2, text: "Works", link: "/work" },
   { id: 3, text: "Resume", link: "/resume" },
   { id: 4, text: "Skills", link: "/skill" },
-  { id: 5, text: "Testimonials", link: "/testimonials" },
+  // { id: 5, text: "Testimonials", link: "/testimonials" },
   { id: 6, text: "Contact", link: "/contact" },
 ];
 export const hero = [
@@ -33,8 +33,8 @@ export const hero = [
 export const service = [
   {
     id: 1,
-    title: "Branding Design",
-    text: "I break down complex user experinece problems to create integritiy focussed solutions that connect billions of people",
+    title: "Performance Optimization",
+    text: "I have skills to ensure quick loading and smooth running of the website or app.",
   },
   {
     id: 2,
@@ -44,51 +44,74 @@ export const service = [
   {
     id: 3,
     title: "UI/UX Design",
-    text: "I break down complex user experinece problems to create integritiy focussed solutions that connect billions of people",
+    text: "I ensure that creating an efficient and all-around satisfying experience for the user, by optimizing the functionality, usability, and accessibility of the website.",
   },
   {
     id: 4,
-    title: "Graphics Design",
-    text: "I break down complex user experinece problems to create integritiy focussed solutions that connect billions of people",
+    title: "Search Engine Optimization",
+    text: "I can do the SEO best practices for your Apps and Websites",
   },
 ];
 
 export const projects = [
   {
     id: 1,
-    title: "Expense Tracker App",
+    title: "Expense Tracker Website",
     desc: "An expense tracker app that helps users keep track of their expenses, set budgets, and analyze spending habits.",
     cover: "../images/portfolio/p1.jpg",
+    category: "Websites",
+
+    repo: 'https://github.com/chuzairnisar425/Expense-Tracker-App'
+    
+
   },
   {
     id: 2,
-    title: "Fitness Tracker App",
-    desc: "A fitness tracker app designed to help users track their workouts, set fitness goals, and monitor progress.",
-    cover: "../images/portfolio/p2.jpg",
+    title: "Company Website (ALS)",
+    desc: "An Appium logic solution (software company) website.",
+    cover: "../images/portfolio/appium.png",
+    category: "Websites",
+    repo: 'https://github.com/chuzairnisar425/Appium-website'
+
   },
   {
     id: 3,
     title: "Task Management App",
     desc: "A task management app that enables users to create, organize, and prioritize tasks, set deadlines, and collaborate with team members.",
-    cover: "../images/portfolio/p3.jpg",
+    cover: "../images/portfolio/todo.png",
+    category: "Websites",
+    repo: 'https://github.com/chuzairnisar425/Todo-List-App'
+
+
   },
   {
     id: 4,
-    title: "Recipe Sharing App",
-    desc: "A recipe sharing app where users can discover new recipes, share their own recipes, and interact with other food enthusiasts.",
-    cover: "../images/portfolio/p4.jpg",
+    title: "Food Sharing App",
+    desc: "A food sharing app where users can discover new foods, share their own recipes, and interact with other food enthusiasts.",
+    cover: "../images/portfolio/food.png",
+    category: "Websites",
+    repo: 'https://github.com/chuzairnisar425/DeliveRoo'
+
+
   },
   {
     id: 5,
     title: "Weather Forecast App",
     desc: "A weather forecast app that provides users with real-time weather updates, forecasts, and weather alerts for their location.",
-    cover: "../images/portfolio/p5.jpg",
+    cover: "../images/portfolio/weatherr.png",
+    category: "Websites",
+    repo: 'https://github.com/chuzairnisar425/weatherApp'
+
+
   },
   {
     id: 6,
-    title: "Finance Management App",
-    desc: "A finance management app that helps users manage their finances, track expenses, set financial goals, and analyze spending patterns.",
-    cover: "../images/portfolio/p6.jpg",
+    title: "Cricket Website",
+    desc: "A Cricket website that helps users manage the team matches , watch predictions, set suggest paying XI, and analyze spending patterns.",
+    cover: "../images/portfolio/cricket.png",
+    category: "UX/UI",
+    repo: 'https://www.figma.com/design/mAXr4EixQ3cOatq4KAoqV9/Fyp-Screens?node-id=0-1&t=jncBMdq1Jo7SGvby-1'
+
   },
 ];
 

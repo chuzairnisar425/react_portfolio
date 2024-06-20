@@ -1,25 +1,37 @@
 import { FaXTwitter } from "react-icons/fa6";
-import { PiDribbbleLogoFill } from "react-icons/pi";
 import { FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaDownload } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 import { hero } from "../../assets/data/data";
 
 export const Hero = () => {
-  const socialIcons = [
-    {
-      id: 1,
-      icon: <FaXTwitter size={17} />,
-    },
-  
-    {
-      id: 2,
-      icon: <FaLinkedinIn size={20} />,
-    },
-    {
-      id: 3,
-      icon: <IoLogoGithub size={20} />,
-    },
-  ];
+    const socialIcons = [
+      {
+        id: 1,
+        icon: <FaXTwitter size={17} />,
+        url: 'https://twitter.com/ChUzair542',    
+
+      },
+    
+      {
+        id: 2,
+        icon: <FaLinkedinIn size={20} />,
+        url: 'https://www.linkedin.com/in/muhammad-uzair-nisar-629490248/',    
+
+      },
+      {
+        id: 3,
+        icon: <IoLogoGithub size={20} />,
+        url: 'https://github.com/chuzairnisar425',    
+
+      },
+      {
+        id: 4,
+        icon: <FaInstagram size={20} />,
+        url: 'https://www.instagram.com/uzair._.nisar/',    
+      },
+    ];
 
   return (
     <>
@@ -48,15 +60,17 @@ export const Hero = () => {
                 <p className="lead">I break down complex user experinece problems to create integritiy focussed solutions that connect billions of people</p>
                 <div className="button-box flexG">
                   <a href="Cv.pdf" className="btn tj-btn-secondary" download>
-                    Download CV <i className="flaticon-download"></i>
+                    Download CV <FaDownload size={20}/>
                   </a>
                   <ul className="ul-reset social-icons">
-                    {socialIcons.map((icon, index) => (
-                      <li key={index}>
-                        <a href="https://twitter.com/ChUzair542">{icon.icon}</a>
-                                          </li>
-                    ))}
-                  </ul>
+    {socialIcons.map((icon) => (
+      <li key={icon.id}>
+        <a href={icon.url} target="_blank" rel="noopener noreferrer">
+          {icon.icon}
+        </a>
+      </li>
+    ))}
+  </ul>
                 </div>
               </div>
             </div>

@@ -7,7 +7,7 @@ export const Footer = () => {
         <div className="container text-center">
           <div className="logo-box">
             <a href="/">
-              <img src="../images/common/logo.png" alt="logo" />
+              <img src="../images/common/mylogo.png" alt="logo" />
             </a>
           </div>
           <div className="footer-menu">
@@ -24,7 +24,7 @@ export const Footer = () => {
           <div className="copy-text">
             <p>
               &copy; 2024 All rights reserved by 
-              <a href="#" target="_blank">
+              <a href="https://www.linkedin.com/in/muhammad-uzair-nisar-629490248/" target="_blank">
                 uzairDev
               </a>
             </p>
