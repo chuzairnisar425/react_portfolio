@@ -8,15 +8,21 @@ export const Blog = () => {
       <section className="blog-section">
         <div className="container">
           <div className="section-header text">
-            <h2 className="section-title">My Acheivements</h2>
-            <p>Completed a successful internship, actively participated in Microsoft Learn Student Ambassadors (MLSA) programs, and currently employed at Appium Logics Solution</p>
+            <h2 className="section-title">My Achievements</h2>
+            <p>
+              Completed a successful internship, actively participated in
+              Microsoft Learn Student Ambassadors (MLSA) programs, and currently
+              employed at Appium Logics Solution
+            </p>
           </div>
           <div className="grid4">
             {blogs.map((blog) => (
               <div className="blog-item" key={blog.id}>
                 <div className="blog-thumb">
-                  <img src={blog.image} alt="" />
-                  <a href="#" className="category">
+                  <a href={blog.link}>
+                    <img src={blog.image} alt="" />
+                  </a>
+                  <a href={blog.categoryLink} className="category" target="_blank">
                     {blog.category}
                   </a>
                 </div>

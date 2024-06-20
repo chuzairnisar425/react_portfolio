@@ -1,0 +1,16 @@
+.section {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    transform: translateY(30px);
+  }
+  
+  .section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .section.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
