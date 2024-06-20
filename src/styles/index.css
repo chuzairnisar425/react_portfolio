@@ -21,8 +21,8 @@
   --tj-black-2: #050709;
   --tj-heading-primary: #102039;
   --tj-heading-secondary: #ea1826;
-  --tj-theme-primary: #8750f7;
-  --tj-theme-secondary: #2a1454;
+  --tj-theme-primary: #43b0c8;
+  --tj-theme-secondary: #1e75a3;
   --tj-theme-accent-1: #0f0715;
   --tj-theme-accent-2: #140c1c;
   --tj-grey-1: #747779;
@@ -561,6 +561,7 @@ header img {
   position: relative;
 }
 .tj-header-area .header-menu ul li a {
+  cursor: pointer;
   display: flex;
   color: var(--tj-white);
   font-size: var(--tj-fz-btn);
@@ -1642,6 +1643,7 @@ footer img {
   gap: 35px;
 }
 .footer-menu ul li a {
+  cursor: pointer;
   color: var(--tj-white);
   font-size: var(--tj-fz-btn);
   font-weight: var(--tj-fw-bold);

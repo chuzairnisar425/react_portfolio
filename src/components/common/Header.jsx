@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { linklist } from "../../assets/data/data";
 import { NavLink } from "react-router-dom";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5"; // Import menu and close icons
+import { Link as ScrollLink } from "react-scroll";
 
 export const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -40,21 +41,27 @@ export const Header = () => {
 
           <div className={`header-menu ${isMenuOpen ? "open" : ""}`}>
             <nav>
-              <ul>
-                {linklist.map((link) => (
-                  <li key={link.id}>
-                    <NavLink to={link.link}>{link.text}</NavLink>
-                  </li>
-                ))}
-              </ul>
+            <ul>
+          {linklist.map((item) => (
+            <li key={item.id}>
+              <ScrollLink
+                to={item.link.substring(1)} // Remove leading '/' to match element IDs
+                smooth={true}
+                duration={500}
+              >
+                {item.text}
+              </ScrollLink>
+            </li>
+          ))}
+        </ul>
             </nav>
           </div>
 
           <div className="flexSB">
             <div className="header-button">
-              <NavLink to="/" className="btn tj-btn-primary">
-                Hire me!
-              </NavLink>
+            <a href='https://www.linkedin.com/in/muhammad-uzair-nisar-629490248/' target="_blank" rel="noopener noreferrer" className="btn tj-btn-primary">
+              Hire me!
+            </a>
             </div>
             <div className="menu-icon" onClick={toggleMenu}>
               {isMenuOpen ? <IoCloseOutline size={55} /> : <IoMenuOutline size={55} />}

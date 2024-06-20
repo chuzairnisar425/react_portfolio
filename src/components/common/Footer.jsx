@@ -1,4 +1,5 @@
 import { linklist } from "../../assets/data/data";
+import { Link as ScrollLink } from "react-scroll";
 
 export const Footer = () => {
   return (
@@ -12,13 +13,19 @@ export const Footer = () => {
           </div>
           <div className="footer-menu">
             <nav>
-              <ul>
-                {linklist.map((link) => (
-                  <li key={link.id}>
-                    <a href={link.link}>{link.text}</a>
-                  </li>
-                ))}
-              </ul>
+            <ul>
+          {linklist.map((item) => (
+            <li key={item.id}>
+              <ScrollLink
+                to={item.link.substring(1)} // Remove leading '/' to match element IDs
+                smooth={true}
+                duration={500}
+              >
+                {item.text}
+              </ScrollLink>
+            </li>
+          ))}
+        </ul>
             </nav>
           </div>
           <div className="copy-text">
