@@ -17,7 +17,6 @@ export const Skill = () => {
                   <div className="icon-box">
                     <img src={skill.icon} alt={skill.name} />
                   </div>
-                  <div className="number">{skill.percentage}%</div>
                 </div>
                 <p>{skill.name}</p>
               </div>

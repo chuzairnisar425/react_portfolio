@@ -8,8 +8,8 @@ export const Blog = () => {
       <section className="blog-section">
         <div className="container">
           <div className="section-header text">
-            <h2 className="section-title">Recent Blogs</h2>
-            <p>We put your ideas and thus your wishes in the form of a unique web project that inspires you and your customers.</p>
+            <h2 className="section-title">My Acheivements</h2>
+            <p>Completed a successful internship, actively participated in Microsoft Learn Student Ambassadors (MLSA) programs, and currently employed at Appium Logics Solution</p>
           </div>
           <div className="grid4">
             {blogs.map((blog) => (

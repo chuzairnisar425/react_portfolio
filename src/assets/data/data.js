@@ -4,6 +4,7 @@ export const linklist = [
   { id: 3, text: "Resume", link: "/resume", style: { cursor: "pointer" } },
   { id: 4, text: "Skills", link: "/skill", style: { cursor: "pointer" } },
   { id: 6, text: "Contact", link: "/contact", style: { cursor: "pointer" } },
+  { id: 6, text: "Achievements", link: "/blog", style: { cursor: "pointer" } },
 ];
 
 export const hero = [
@@ -159,12 +160,18 @@ export const educationData = [
 ];
 
 export const skillsData = [
-  { id: 1, name: "Figma", percentage: 92, icon: "../images/skill/s1.svg" },
-  { id: 2, name: "Sketch", percentage: 80, icon: "../images/skill/s2.svg" },
-  { id: 3, name: "XD", percentage: 85, icon: "../images/skill/s3.svg" },
-  { id: 4, name: "WordPess", percentage: 99, icon: "../images/skill/s4.svg" },
-  { id: 5, name: "React", percentage: 89, icon: "../images/skill/s5.svg" },
-  { id: 6, name: "JavaScript", percentage: 93, icon: "../images/skill/s6.svg" },
+  { id: 1, name: "Figma",  icon: "../images/skill/s1.svg" },
+  { id: 2, name: "Sketch",  icon: "../images/skill/s2.svg" },
+  { id: 3, name: "XD",  icon: "../images/skill/s3.svg" },
+  { id: 4, name: "WordPess",  icon: "../images/skill/s4.svg" },
+  { id: 5, name: "React",  icon: "../images/skill/s5.svg" },
+  { id: 6, name: "JavaScript",  icon: "../images/skill/s6.svg" },
+  { id: 7, name: "Html", icon: "../images/skill/html.png" },
+  { id: 8, name: "CSS",  icon: "../images/skill/css.png" },
+  { id: 9, name: "Bootstrap",  icon: "../images/skill/bootstrap.png" },
+  { id: 10, name: "Tailwind CSS",  icon: "../images/skill/tailwind.png" },
+  { id: 11, name: "Github ",  icon: "../images/skill/github.png" },
+  { id: 12, name: "Netlify ",  icon: "../images/skill/netlify.png" },
 ];
 export const testimonialData = [
   {
@@ -212,68 +219,53 @@ export const testimonialData = [
 export const blogs = [
   {
     id: 1,
-    image: "../images/blog/b1.jpg",
+    image: "../images/blog/frontend.jpeg",
     category: "Tutorial",
     date: "Oct 01, 2022",
     commentCount: 0,
-    title: "Top 10 UI UX Designers",
+    title: "Frontend Developer",
   },
   {
     id: 2,
-    image: "../images/blog/b2.jpg",
+    image: "../images/blog/beta.jpg",
     category: "TIPS",
     date: "Nov 01, 2022",
     commentCount: 0,
-    title: "App Development Guides",
+    title: "Beta MLSA",
   },
   {
     id: 3,
-    image: "../images/blog/b3.jpg",
+    image: "../images/blog/alpha.jpeg",
     category: "FREEBIES",
     date: "Dec 01, 2022",
     commentCount: 0,
-    title: "Learn Graphic Design Free",
+    title: "Alpha MLSA",
   },
   {
     id: 4,
-    image: "../images/blog/b4.jpg",
+    image: "../images/blog/msla.jpeg",
     category: "Tutorial",
     date: "Jan 01, 2023",
     commentCount: 0,
-    title: "Web Design Basics",
+    title: "DIve into MLSA",
   },
   {
     id: 5,
-    image: "../images/blog/b5.png",
+    image: "../images/blog/bytewise.jpeg",
     category: "TIPS",
     date: "Feb 01, 2023",
     commentCount: 0,
-    title: "SEO Strategies",
+    title: "Exbytewise Intern",
   },
   {
     id: 6,
-    image: "../images/blog/b6.jpg",
+    image: "../images/blog/ibmcertified.png",
     category: "FREEBIES",
     date: "Mar 01, 2023",
     commentCount: 0,
-    title: "Introduction to JavaScript",
+    title: "IBM Certified React Developer",
   },
-  {
-    id: 7,
-    image: "../images/blog/b7.jpg",
-    category: "TIPS",
-    date: "Apr 01, 2023",
-    commentCount: 0,
-    title: "Responsive Web Design",
-  },
-  {
-    id: 8,
-    image: "../images/blog/b8.jpg",
-    category: "Tutorial",
-    date: "May 01, 2023",
-    commentCount: 0,
-    title: "CSS Flexbox Tutorial",
-  },
+  
 ];
 
 export const projectsDetails = [

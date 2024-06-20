@@ -988,6 +988,10 @@ header img {
   border-radius: 50px;
   z-index: 10;
   position: relative;
+  cursor: pointer;
+}
+.portfolio-filter .button-group button:hover {
+font-weight: bold;
 }
 .portfolio-filter .button-group {
   position: relative;
