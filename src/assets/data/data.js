@@ -25,8 +25,8 @@ export const hero = [
   },
   {
     id: 4,
-    title: "Years of Experience",
-    text: "1",
+    title: "Semester",
+    text: "8th",
   },
   
 ];
