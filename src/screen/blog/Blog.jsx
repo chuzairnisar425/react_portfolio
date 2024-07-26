@@ -30,21 +30,17 @@ export const Blog = () => {
                   <div className="blog-meta">
                     <ul className="ul-reset">
                       <li>
-                        <i>
-                          <CiCalendar size={20} />
-                        </i>
-                        {blog.date}
+                      
+                   
                       </li>
                       <li>
-                        <i>
-                          <FaRegComments size={20} />
-                        </i>
-                        Comment ({blog.commentCount})
+                       
+                       
                       </li>
                     </ul>
                   </div>
-                  <h3 className="blog-title">
-                    <a href={blog.link}>{blog.title}</a>
+                  <h3 className="blog-title" style={{textAlign:'center'}}>
+                    <a href={blog.link}  style={{fontSize:'15px'}}>{blog.title}</a>
                   </h3>
                 </div>
               </div>

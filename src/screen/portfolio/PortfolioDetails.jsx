@@ -31,10 +31,7 @@ export const PortfolioDetails = () => {
                     <div className="key">Client</div>
                     <div className="value">{project.client}</div>
                   </div>
-                  <div className="info_item">
-                    <div className="key">Start Date</div>
-                    <div className="value">{project.startDate}</div>
-                  </div>
+                 
                   <div className="info_item">
                     <div className="key">Designer</div>
                     <div className="value">

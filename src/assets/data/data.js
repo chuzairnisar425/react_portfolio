@@ -76,11 +76,11 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Task Management App",
-    desc: "A task management app that enables users to create, organize, and prioritize tasks, set deadlines, and collaborate with team members.",
-    cover: "../images/portfolio/todo.png",
+    title: "BookStore App",
+    desc: "The BookStore app I developed using the MERN stack integrates backend data with frontend display, providing seamless login and logout authentication functionality.",
+    cover: "../images/portfolio/bookstore.png",
     category: "Websites",
-    repo: 'https://github.com/chuzairnisar425/Todo-List-App'
+    repo: 'https://github.com/chuzairnisar425/bookstore'
 
 
   },

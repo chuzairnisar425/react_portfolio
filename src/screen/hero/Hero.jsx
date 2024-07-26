@@ -59,8 +59,8 @@ export const Hero = () => {
 
                 <p className="lead">I break down complex user experinece problems to create integritiy focussed solutions that connect billions of people</p>
                 <div className="button-box flexG">
-                  <a href="Cv.pdf" className="btn tj-btn-secondary" download>
-                    Download CV <FaDownload size={20}/>
+                  <a href="Cv.pdf" className="btn tj-btn-secondary"style={{fontSize:'10px'}} download>
+                    Download CV <FaDownload size={15}/>
                   </a>
                   <ul className="ul-reset social-icons">
     {socialIcons.map((icon) => (

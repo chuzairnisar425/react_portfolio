@@ -901,7 +901,7 @@ header img {
   gap: 20px;
 }
 .services-widget .service-item .left-box .service-title {
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 0;
   text-transform: capitalize;
 }
@@ -1044,12 +1044,14 @@ font-weight: bold;
   width: 22%;
 }
 .portfolio-box .image-box img {
+  text-decoration: none;
   width: 100%;
   height: 100%;
   background-size: cover;
   border-radius: 10px;
 }
 .portfolio-box .content-box {
+  text-decoration: none;
   position: absolute;
   bottom: 15px;
   left: 0;
@@ -1073,6 +1075,7 @@ font-weight: bold;
   background: linear-gradient(260deg, var(--tj-theme-secondary) 0%, var(--tj-theme-primary) 100%);
 }
 .portfolio-box .portfolio-item:hover .content-box {
+  text-decoration: none;
   opacity: 1;
   visibility: visible;
   -webkit-transform: translateY(0);
@@ -1081,6 +1084,7 @@ font-weight: bold;
 }
 .portfolio-box .portfolio-item .content-box .portfolio-title {
   font-size: 30px;
+  text-decoration: none;
 }
 .portfolio-box .portfolio-item .content-box p {
   margin-bottom: 0;
@@ -1281,6 +1285,7 @@ font-weight: bold;
   margin-bottom: 20px;
 }
 .testimonials-widget .testimonial-item .image-box {
+  text-decoration: none;
   width: 40%;
   max-width: 120px;
 }
@@ -1531,7 +1536,7 @@ font-weight: bold;
   margin-bottom: 3px;
 }
 .contact-info-list .text-box a {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: var(--tj-fw-medium);
   color: var(--tj-white);
   text-decoration: none;
@@ -1614,6 +1619,9 @@ font-weight: bold;
   }
   .w-half {
     width: 100%;
+  }
+  .services-widget .service-item .left-box .service-title {
+    font-size: 18px;
   }
 }
 /* -------------  END: Contact Section  --------------*/

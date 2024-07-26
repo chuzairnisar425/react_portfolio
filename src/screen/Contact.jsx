@@ -2,8 +2,38 @@ import { useState, useEffect } from "react";
 import { IoCallOutline } from "react-icons/io5";
 import { TfiEmail } from "react-icons/tfi";
 import { CiLocationOn } from "react-icons/ci";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { IoLogoGithub } from "react-icons/io";
 
 export const Contact = () => {
+  const socialIcons = [
+    {
+      id: 1,
+      icon: <FaXTwitter size={17} />,
+      url: 'https://twitter.com/ChUzair542',    
+
+    },
+  
+    {
+      id: 2,
+      icon: <FaLinkedinIn size={20} />,
+      url: 'https://www.linkedin.com/in/muhammad-uzair-nisar-629490248/',    
+
+    },
+    {
+      id: 3,
+      icon: <IoLogoGithub size={20} />,
+      url: 'https://github.com/chuzairnisar425',    
+
+    },
+    {
+      id: 4,
+      icon: <FaInstagram size={20} />,
+      url: 'https://www.instagram.com/uzair._.nisar/',    
+    },
+  ];
   const [contactInfo, setContactInfo] = useState({
     phone: "+923036911226",
     email: "uzair.nisar425@gmail.com",
@@ -40,52 +70,23 @@ export const Contact = () => {
               <p>I design and code beautifully simple things and I love what I do. Just simple like that!</p>
             </div>
 
-            <div className="tj-contact-form">
-              <form id="contact-form">
-                <div className="flexSB gap">
-                  <div className="form_group">
-                    <input type="text" name="conName" id="conName" placeholder="First name" />
-                  </div>
-                  <div className="form_group">
-                    <input type="text" name="conLName" id="conLName" placeholder="Last name" />
-                  </div>
-                </div>
-                <div className="flexSB gap">
-                  <div className="form_group">
-                    <input type="email" name="conEmail" id="conEmail" placeholder="Email address" />
-                  </div>
-                  <div className="form_group">
-                    <input type="tel" name="conPhone" id="conPhone" placeholder="Phone number" />
-                  </div>
-                </div>
-                <div className="form_group">
-                  <select name="conService" id="conService" className="tj-nice-select">
-                    <option value="" selected disabled>
-                      Choose Service
-                    </option>
-                    <option value="braning">Branding Design</option>
-                    <option value="web">Web Design</option>
-                    <option value="uxui">UI/UX Design</option>
-                    <option value="app">App Design</option>
-                  </select>
-                </div>
-                <div className="form_group">
-                  <textarea name="conMessage" id="conMessage" placeholder="Message"></textarea>
-                </div>
-                <div className="form_btn">
-                  <button type="submit" className="btn tj-btn-primary">
-                    Send Message
-                  </button>
-                </div>
-              </form>
-            </div>
+<ul className="ul-reset social-icons">
+    {socialIcons.map((icon) => (
+      <li key={icon.id}>
+        <a href={icon.url} target="_blank" rel="noopener noreferrer">
+          {icon.icon}
+        </a>
+      </li>
+    ))}
+  </ul>
+         
           </div>
 
           <div className="contact-info-list  w-half">
             <ul className="ul-reset">
               <li>
                 <div className="icon-box">
-                  <IoCallOutline size={25} />
+                  <IoCallOutline size={20} />
                 </div>
                 <div className="text-box">
                   <p>Phone</p>
@@ -103,7 +104,7 @@ export const Contact = () => {
               </li>
               <li>
                 <div className="icon-box">
-                  <CiLocationOn size={25} />
+                  <CiLocationOn size={20} />
                 </div>
                 <div className="text-box">
                   <p>Address</p>
