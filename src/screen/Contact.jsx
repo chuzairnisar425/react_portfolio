@@ -12,26 +12,26 @@ export const Contact = () => {
     {
       id: 1,
       icon: <FaXTwitter size={17} />,
-      url: 'https://twitter.com/ChUzair542',    
+      url: 'https://twitter.com/ChUzair542',
 
     },
-  
+
     {
       id: 2,
       icon: <FaLinkedinIn size={20} />,
-      url: 'https://www.linkedin.com/in/muhammad-uzair-nisar-629490248/',    
+      url: 'https://www.linkedin.com/in/muhammad-uzair-nisar-629490248/',
 
     },
     {
       id: 3,
       icon: <IoLogoGithub size={20} />,
-      url: 'https://github.com/chuzairnisar425',    
+      url: 'https://github.com/chuzairnisar425',
 
     },
     {
       id: 4,
       icon: <FaInstagram size={20} />,
-      url: 'https://www.instagram.com/uzair._.nisar/',    
+      url: 'https://www.instagram.com/uzair._.nisar/',
     },
   ];
   const [contactInfo, setContactInfo] = useState({
@@ -69,17 +69,16 @@ export const Contact = () => {
               <h2 className="section-title">Let’s work together!</h2>
               <p>I design and code beautifully simple things and I love what I do. Just simple like that!</p>
             </div>
+            <ul className="ul-reset social-icons">
+              {socialIcons.map((icon) => (
+                <li key={icon.id}>
+                  <a href={icon.url} target="_blank" rel="noopener noreferrer">
+                    {icon.icon}
+                  </a>
+                </li>
+              ))}
+            </ul>
 
-<ul className="ul-reset social-icons">
-    {socialIcons.map((icon) => (
-      <li key={icon.id}>
-        <a href={icon.url} target="_blank" rel="noopener noreferrer">
-          {icon.icon}
-        </a>
-      </li>
-    ))}
-  </ul>
-         
           </div>
 
           <div className="contact-info-list  w-half">
