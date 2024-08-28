@@ -34,8 +34,9 @@ export const Header = () => {
       <header className={`tj-header-area header-absolute ${isSticky ? "sticky" : ""}`}>
         <div className="container flexSB">
           <div className="logo-box">
-            <NavLink to="/">
-              <img src="../images/common/mylogo.png" alt="logo" />
+            <NavLink to="/" style={{ textDecoration: 'none' }}>
+              <span className="firstName">._Uzair</span><span className="lastName">Nisar_.</span>
+              {/* <img src="../images/common/mylogo.png" alt="logo" /> */}
             </NavLink>
           </div>
 
