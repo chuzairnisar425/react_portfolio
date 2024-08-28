@@ -25,7 +25,7 @@ export const Service = () => {
                   <p>{item.text}</p>
                 </div>
                 <i>
-                  <GoArrowUpRight size={40} />
+                  <GoArrowUpRight size={25} />
                 </i>
                 <button className="service-link modal-popup"></button>
               </div>
