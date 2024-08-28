@@ -466,6 +466,7 @@ body.loaded {
   z-index: 20;
 }
 
+
 .load-text span {
   -webkit-animation: loading 1s infinite alternate;
   animation: loading 1s infinite alternate;
@@ -583,9 +584,23 @@ header .logo-box {
   max-width: 60px;
 }
 
-header img {
+/* header sp {
   width: 150px;
+} */
+.firstName {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+
 }
+
+.lastName {
+
+  color: skyblue;
+  font-size: 25px;
+  font-weight: bold;
+}
+
 
 .tj-header-area .header-menu {
   margin-left: auto;
@@ -2164,6 +2179,14 @@ footer img {
 @media (max-width: 768px) {
   .hero-image-box img {
     max-width: 300px;
+  }
+
+  .firstName {
+    font-size: 18px;
+  }
+
+  .lastName {
+    font-size: 18px;
   }
 
   .hero-sub-title {
