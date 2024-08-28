@@ -4,34 +4,36 @@ import { FaInstagram } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 import { hero } from "../../assets/data/data";
+import Typewriter from 'typewriter-effect';
+
 
 export const Hero = () => {
-    const socialIcons = [
-      {
-        id: 1,
-        icon: <FaXTwitter size={17} />,
-        url: 'https://twitter.com/ChUzair542',    
+  const socialIcons = [
+    {
+      id: 1,
+      icon: <FaXTwitter size={17} />,
+      url: 'https://twitter.com/ChUzair542',
 
-      },
-    
-      {
-        id: 2,
-        icon: <FaLinkedinIn size={20} />,
-        url: 'https://www.linkedin.com/in/muhammad-uzair-nisar-629490248/',    
+    },
 
-      },
-      {
-        id: 3,
-        icon: <IoLogoGithub size={20} />,
-        url: 'https://github.com/chuzairnisar425',    
+    {
+      id: 2,
+      icon: <FaLinkedinIn size={20} />,
+      url: 'https://www.linkedin.com/in/muhammad-uzair-nisar-629490248/',
 
-      },
-      {
-        id: 4,
-        icon: <FaInstagram size={20} />,
-        url: 'https://www.instagram.com/uzair._.nisar/',    
-      },
-    ];
+    },
+    {
+      id: 3,
+      icon: <IoLogoGithub size={20} />,
+      url: 'https://github.com/chuzairnisar425',
+
+    },
+    {
+      id: 4,
+      icon: <FaInstagram size={20} />,
+      url: 'https://www.instagram.com/uzair._.nisar/',
+    },
+  ];
 
   return (
     <>
@@ -42,15 +44,22 @@ export const Hero = () => {
               HI
             </text>
           </svg>
-        </div> 
+        </div>
         <div className="container">
           <div className="content flexSB">
             <div className="left w-half">
               <div className="hero-content-box">
                 <span className="hero-sub-title">I am Muhammad Uzair Nisar  </span>
                 <h1 className="hero-title">
-                 Web Developer +<br />
-                  UX Designer
+                  <Typewriter
+                    options={{
+                      strings: ['React Developer', 'Software Engineer'],
+                      autoStart: true,
+                      loop: true,
+                      deleteSpeed: 50,
+                      delay: 75,
+                    }}
+                  />
                 </h1>
 
                 <div className="hero-image-box d-md-none text-center">
@@ -58,19 +67,19 @@ export const Hero = () => {
                 </div>
 
                 <p className="lead">I break down complex user experinece problems to create integritiy focussed solutions that connect billions of people</p>
-                <div className="button-box flexG">
-                  <a href="Cv.pdf" className="btn tj-btn-secondary"style={{fontSize:'10px'}} download>
-                    Download CV <FaDownload size={15}/>
+                <div className="button-box flexG" style={{ display: 'flex', justifyContent: 'center', placeItems: 'center' }}>
+                  <a href="UzairCV.pdf" className="btn tj-btn-secondary" style={{ fontSize: '10px' }} download>
+                    My CV <FaDownload size={10} />
                   </a>
                   <ul className="ul-reset social-icons">
-    {socialIcons.map((icon) => (
-      <li key={icon.id}>
-        <a href={icon.url} target="_blank" rel="noopener noreferrer">
-          {icon.icon}
-        </a>
-      </li>
-    ))}
-  </ul>
+                    {socialIcons.map((icon) => (
+                      <li key={icon.id}>
+                        <a href={icon.url} target="_blank" rel="noopener noreferrer">
+                          {icon.icon}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
