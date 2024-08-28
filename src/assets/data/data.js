@@ -1,10 +1,10 @@
 export const linklist = [
-  { id: 0, text: "Home", link: "/", style: { cursor: "pointer" } },
-  { id: 1, text: "Services", link: "/service", style: { cursor: "pointer" } },
-  { id: 3, text: "Resume", link: "/resume", style: { cursor: "pointer" } },
-  { id: 4, text: "Skills", link: "/skill", style: { cursor: "pointer" } },
-  { id: 6, text: "Contact", link: "/contact", style: { cursor: "pointer" } },
-  { id: 6, text: "Achievements", link: "/blog", style: { cursor: "pointer" } },
+
+  { id: 0, text: "Services", link: "/service", style: { cursor: "pointer" } },
+  { id: 1, text: "Resume", link: "/resume", style: { cursor: "pointer" } },
+  { id: 2, text: "Skills", link: "/skill", style: { cursor: "pointer" } },
+  { id: 3, text: "Contact", link: "/contact", style: { cursor: "pointer" } },
+  { id: 4, text: "Achievements", link: "/blog", style: { cursor: "pointer" } },
 ];
 
 export const hero = [
@@ -28,7 +28,7 @@ export const hero = [
     title: "Semester",
     text: "8th",
   },
-  
+
 ];
 export const service = [
   {
@@ -62,7 +62,7 @@ export const projects = [
     category: "Websites",
 
     repo: 'https://github.com/chuzairnisar425/Expense-Tracker-App'
-    
+
 
   },
   {
@@ -134,7 +134,7 @@ export const experienceData = [
     title: "UI Designer",
     institute: "Remote, Pakistan",
   },
- 
+
 ];
 
 export const educationData = [
@@ -156,22 +156,22 @@ export const educationData = [
     title: "Matric",
     institute: "PAEC Model School,Jauharabad",
   },
- 
+
 ];
 
 export const skillsData = [
-  { id: 1, name: "Figma",  icon: "../images/skill/s1.svg" },
-  { id: 2, name: "Sketch",  icon: "../images/skill/s2.svg" },
-  { id: 3, name: "XD",  icon: "../images/skill/s3.svg" },
-  { id: 4, name: "WordPess",  icon: "../images/skill/s4.svg" },
-  { id: 5, name: "React",  icon: "../images/skill/s5.svg" },
-  { id: 6, name: "JavaScript",  icon: "../images/skill/s6.svg" },
+  { id: 1, name: "Figma", icon: "../images/skill/s1.svg" },
+  { id: 2, name: "Sketch", icon: "../images/skill/s2.svg" },
+  { id: 3, name: "XD", icon: "../images/skill/s3.svg" },
+  { id: 4, name: "WordPess", icon: "../images/skill/s4.svg" },
+  { id: 5, name: "React", icon: "../images/skill/s5.svg" },
+  { id: 6, name: "JavaScript", icon: "../images/skill/s6.svg" },
   { id: 7, name: "Html", icon: "../images/skill/html.png" },
-  { id: 8, name: "CSS",  icon: "../images/skill/css.png" },
-  { id: 9, name: "Bootstrap",  icon: "../images/skill/bootstrap.png" },
-  { id: 10, name: "Tailwind CSS",  icon: "../images/skill/tailwind.png" },
-  { id: 11, name: "Github ",  icon: "../images/skill/github.png" },
-  { id: 12, name: "Netlify ",  icon: "../images/skill/netlify.png" },
+  { id: 8, name: "CSS", icon: "../images/skill/css.png" },
+  { id: 9, name: "Bootstrap", icon: "../images/skill/bootstrap.png" },
+  { id: 10, name: "Tailwind CSS", icon: "../images/skill/tailwind.png" },
+  { id: 11, name: "Github ", icon: "../images/skill/github.png" },
+  { id: 12, name: "Netlify ", icon: "../images/skill/netlify.png" },
 ];
 // export const testimonialData = [
 //   {
@@ -275,7 +275,7 @@ export const blogs = [
     commentCount: 0,
     title: "IBM Certified React Developer",
   },
-  
+
 ];
 
 export const projectsDetails = [
