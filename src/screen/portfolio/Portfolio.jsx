@@ -46,16 +46,17 @@ export const Portfolio = () => {
                     </a>
                   </div>
                   <div className="content-box">
-                    <a href={project.repo} target="_blank" rel="noopener noreferrer">
-                      <h3 className="portfolio-title">{project.title}</h3>
+                    <a href={project.repo} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                      <h5 className="portfolio-title" >{project.title}</h5>
                     </a>
                     <p>{project.desc}</p>
                     <a href={project.repo} target="_blank" rel="noopener noreferrer">
                       <i>
-                        <GoArrowUpRight size={50} />
+                        <GoArrowUpRight size={30} />
                       </i>
                     </a>
                   </div>
+                  <h5 className="portfolio-title">{project.title}</h5>
                 </div>
               ))}
             </div>
