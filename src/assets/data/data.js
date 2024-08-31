@@ -16,12 +16,12 @@ export const hero = [
   {
     id: 2,
     title: "Project Completed",
-    text: "25+",
+    text: "15+",
   },
   {
     id: 3,
     title: "Happy Clients",
-    text: "3",
+    text: "2",
   },
   {
     id: 4,
@@ -67,7 +67,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Company Website (ALS)",
+    title: "Company Website (Appium Logic Solutions)",
     desc: "An Appium logic solution (software company) website.",
     cover: "../images/portfolio/appium.png",
     category: "Websites",
@@ -141,7 +141,7 @@ export const educationData = [
   {
     id: 1,
     time: "2021 - 2025",
-    title: "BS IN Software Engineering",
+    title: "BS Software Engineering",
     institute: "NUML,ISLAMABAD",
   },
   {
