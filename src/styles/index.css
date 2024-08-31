@@ -1500,6 +1500,7 @@ header .logo-box {
 }
 
 .blog-section .section-header {
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1821,6 +1822,8 @@ header .logo-box {
   .contact-section .container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .resume-section .resume-item {
