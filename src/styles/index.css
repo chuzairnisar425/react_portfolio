@@ -343,7 +343,7 @@ a h6:hover {
 }
 
 .section-header .section-title {
-  font-size: 45px;
+  font-size: 35px;
   background: var(--tj-theme-primary);
   background: -webkit-gradient(linear, left top, right top, from(var(--tj-theme-primary)), to(var(--tj-white)));
   background: -o-linear-gradient(left, var(--tj-theme-primary) 0%, var(--tj-white) 100%);
@@ -351,6 +351,8 @@ a h6:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
   gap: 15px;
   margin-bottom: 0;
 }
@@ -1008,7 +1010,7 @@ header .logo-box {
 }
 
 .services-widget .service-item .left-box .service-title {
-  font-size: 25px;
+  font-size: 20px;
   margin-bottom: 0;
   text-transform: capitalize;
 }
@@ -1209,7 +1211,7 @@ header .logo-box {
 }
 
 .portfolio-box .portfolio-item .content-box .portfolio-title {
-  font-size: 30px;
+  font-size: 20px;
   text-decoration: none;
 }
 
@@ -2176,6 +2178,61 @@ footer img {
   }
 }
 
+@media (max-width: 1116px) {
+
+  /* CSS for menu animation */
+  .header-menu {
+    display: none;
+  }
+
+  .header-menu.nav-open ul {
+    left: 0;
+    /* Show menu from left */
+  }
+
+  .menu-icon {
+    display: block;
+    /* Show menu icon */
+  }
+
+  .header-menu.open {
+    display: block;
+  }
+
+  .header-menu.open ul {
+    left: 0;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 0 !important;
+    position: absolute;
+    top: 70px;
+    border: 2px solid var(--tj-theme-primary);
+    left: 0;
+    margin: 5% !important;
+    padding: 50px;
+    width: 90%;
+    z-index: 9999999999999999999;
+    backdrop-filter: blur(100px);
+    border-radius: 10px;
+    transition: max-height 0.3s ease, left 0.3s ease;
+    animation-name: slideIn;
+    animation-duration: 0.3s;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .hero-image-box img {
     max-width: 300px;
@@ -2233,11 +2290,12 @@ footer img {
   }
 
   .section-header .section-title {
-    font-size: 35px;
+    font-size: 25px;
   }
 
   .section-header p {
     font-size: 15px;
+
   }
 
   .services-widget .service-item .left-box .service-title {
