@@ -61,17 +61,17 @@ export const projects = [
     cover: "../images/portfolio/moviefinder.png",
     category: "Websites",
 
-    repo: 'https://github.com/chuzairnisar425/Expense-Tracker-App'
+    repo: 'https://filmfinder12.netlify.app/'
 
 
   },
   {
     id: 2,
     title: "Company Website (Appium Logic Solutions)",
-    desc: "An Appium logic solution (software company) website.",
+    desc: "During my internship, I successfully designed and developed a company website that is currently live. This project involved creating a responsive and user-friendly interface, which continues to serve the company's online presence..",
     cover: "../images/portfolio/appium.png",
     category: "Websites",
-    repo: 'https://github.com/chuzairnisar425/Appium-website'
+    repo: 'https://appiumlogicssolutions.com/'
 
   },
   {
@@ -80,7 +80,7 @@ export const projects = [
     desc: "The BookStore app I developed using the MERN stack integrates backend data with frontend display, providing seamless login and logout authentication functionality.",
     cover: "../images/portfolio/bookstore.png",
     category: "Websites",
-    repo: 'https://github.com/chuzairnisar425/bookstore'
+    repo: 'https://bookstore-xi-gilt.vercel.app/'
 
 
   },
@@ -90,7 +90,7 @@ export const projects = [
     desc: "A food sharing app where users can discover new foods, share their own recipes, and interact with other food enthusiasts.",
     cover: "../images/portfolio/Delievero.png",
     category: "Websites",
-    repo: 'https://github.com/chuzairnisar425/DeliveRoo'
+    repo: 'https://deliveroofood.netlify.app/'
 
 
   },
