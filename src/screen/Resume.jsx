@@ -20,6 +20,7 @@ export const Resume = () => {
                   <div className="time">{item.time}</div>
                   <h3 className="resume-title">{item.title}</h3>
                   <div className="institute">{item.institute}</div>
+                  <div className="institute" style={{ textAlign: "justify" }}>{item.desc}</div>
                 </div>
               ))}
             </div>
