@@ -90,7 +90,7 @@ export const Hero = () => {
             </div>
           </div>
 
-          <div className="funfact-area grid4">
+          <div className="funfact-area grid4" style={{ textAlign: 'center' }}>
             {hero.map((item, index) => (
               <div className="funfact-item" key={index}>
                 <div className="number">
