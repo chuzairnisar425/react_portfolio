@@ -56,9 +56,9 @@ export const service = [
 export const projects = [
   {
     id: 1,
-    title: "Expense Tracker Website",
-    desc: "An expense tracker app that helps users keep track of their expenses, set budgets, and analyze spending habits.",
-    cover: "../images/portfolio/p1.jpg",
+    title: "Movie Finder",
+    desc: "I've created an app called MovieFinder using React, where I utilize an API to filter and search for movies..",
+    cover: "../images/portfolio/moviefinder.png",
     category: "Websites",
 
     repo: 'https://github.com/chuzairnisar425/Expense-Tracker-App'
@@ -88,7 +88,7 @@ export const projects = [
     id: 4,
     title: "Food Sharing App",
     desc: "A food sharing app where users can discover new foods, share their own recipes, and interact with other food enthusiasts.",
-    cover: "../images/portfolio/food.png",
+    cover: "../images/portfolio/Delievero.png",
     category: "Websites",
     repo: 'https://github.com/chuzairnisar425/DeliveRoo'
 
@@ -98,7 +98,7 @@ export const projects = [
     id: 5,
     title: "Weather Forecast App",
     desc: "A weather forecast app that provides users with real-time weather updates, forecasts, and weather alerts for their location.",
-    cover: "../images/portfolio/weatherr.png",
+    cover: "../images/portfolio/weather.png",
     category: "Websites",
     repo: 'https://github.com/chuzairnisar425/weatherApp'
 
@@ -112,27 +112,40 @@ export const projects = [
     category: "UX/UI",
     repo: 'https://www.figma.com/design/mAXr4EixQ3cOatq4KAoqV9/Fyp-Screens?node-id=0-1&t=jncBMdq1Jo7SGvby-1'
 
+  }, {
+    id: 7,
+    title: "The Chillis",
+    desc: "Basically, this is a food ordering app where I plan to integrate Stripe for learning purposes. I've developed the frontend using React and Redux Toolkit for practice, and I'm currently working on the backend using the MERN stack.",
+    cover: "../images/portfolio/chillis.png",
+    category: "Websites",
+    repo: 'https://food-store-rust.vercel.app/'
+
+  }, {
+    id: 8,
+    title: "Recipe Ingredient ",
+    desc: "I've built a MERN application using a food API, incorporating Redux Toolkit. The app allows users to add food recipes to their favorites, filter them, and requires login to add favorites, with protected routes ensuring secure access",
+    cover: "../images/portfolio/homechef.png",
+    category: "Websites",
+    repo: 'https://github.com/chuzairnisar425/recipe-app'
+
   },
 ];
 
 export const experienceData = [
   {
     id: 1,
-    time: "June'2024 - Present",
-    title: "Web Developer",
-    institute: "Part-Time Job at Appium Logics Solution, Remote",
+    time: "June'2024 - August'2024",
+    title: "Frontend Developer",
+    institute: "Appium Logics Solution, Remote",
+    desc: 'At Appium Logic Solutions, I refined my front-end skills by designing user interfaces, optimizing performance, and delivering high-quality solutions.',
+
   },
   {
     id: 2,
-    time: "May'2022 - August'2022",
+    time: "May'2023 - August'2023",
     title: "Frontend Developer",
     institute: "Intern at  Bytewise Limited Private, Remote",
-  },
-  {
-    id: 3,
-    time: "October'2021 - December'2021",
-    title: "UI Designer",
-    institute: "Remote, Pakistan",
+    desc: 'At ByteWise Limited, I fostered a collaborative environment that enhanced team productivity, while working on diverse projects to develop intuitive, responsive interfaces.',
   },
 
 ];
