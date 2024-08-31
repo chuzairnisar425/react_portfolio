@@ -10,7 +10,7 @@ export const Resume = () => {
           <div className="w-half">
             <div className="section-header">
               <h2 className="section-title">
-                <PiGraduationCap size={50} /> My Experience
+                <PiGraduationCap size={40} /> My Experience
               </h2>
             </div>
 
@@ -28,7 +28,7 @@ export const Resume = () => {
           <div className="w-half">
             <div className="section-header">
               <h2 className="section-title flexE">
-                <CiMedal size={50} />
+                <CiMedal size={40} />
                 My Education
               </h2>
             </div>
