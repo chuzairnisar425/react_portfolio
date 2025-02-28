@@ -1,59 +1,68 @@
+import { motion } from "framer-motion";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 import { hero } from "../../assets/data/data";
-import Typewriter from 'typewriter-effect';
+import Typewriter from "typewriter-effect";
 
+// Animation Variants
+const fadeIn = (direction = "up", delay = 0) => {
+  return {
+    hidden: {
+      opacity: 0,
+      x: direction === "left" ? -100 : direction === "right" ? 100 : 0,
+      y: direction === "up" ? -100 : direction === "down" ? 100 : 0,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: { duration: 0.8, delay },
+    },
+  };
+};
 
 export const Hero = () => {
   const socialIcons = [
-    {
-      id: 1,
-      icon: <FaXTwitter size={17} />,
-      url: 'https://twitter.com/ChUzair542',
-
-    },
-
-    {
-      id: 2,
-      icon: <FaLinkedinIn size={20} />,
-      url: 'www.linkedin.com/in/muhammad-uzair-nisar',
-
-    },
-    {
-      id: 3,
-      icon: <IoLogoGithub size={20} />,
-      url: 'https://github.com/chuzairnisar425',
-
-    },
-    {
-      id: 4,
-      icon: <FaInstagram size={20} />,
-      url: 'https://www.instagram.com/uzair._.nisar/',
-    },
+    { id: 1, icon: <FaXTwitter size={17} />, url: "https://twitter.com/ChUzair542" },
+    { id: 2, icon: <FaLinkedinIn size={20} />, url: "https://linkedin.com/in/muhammad-uzair-nisar" },
+    { id: 3, icon: <IoLogoGithub size={20} />, url: "https://github.com/chuzairnisar425" },
+    { id: 4, icon: <FaInstagram size={20} />, url: "https://www.instagram.com/uzair._.nisar/" },
   ];
 
   return (
     <>
       <section className="hero-section">
-        <div className="intro_text">
+        <motion.div
+          className="intro_text"
+          variants={fadeIn("down", 0.2)}
+          initial="hidden"
+          animate="visible"
+        >
           <svg viewBox="0 0 1320 300">
             <text x="50%" y="50%" textAnchor="middle">
               HI
             </text>
           </svg>
-        </div>
+        </motion.div>
+
         <div className="container">
           <div className="content flexSB">
-            <div className="left w-half">
+            {/* Left Section */}
+            <motion.div
+              className="left w-half"
+              variants={fadeIn("left", 0.3)}
+              initial="hidden"
+              animate="visible"
+            >
               <div className="hero-content-box">
-                <span className="hero-sub-title">I am Muhammad Uzair Nisar  </span>
+                <span className="hero-sub-title">I am Muhammad Uzair Nisar</span>
                 <h1 className="hero-title">
                   <Typewriter
                     options={{
-                      strings: ['ReactJs Developer', 'Software Engineer', 'Frontend Developer'],
+                      strings: ["ReactJs Developer", "Software Engineer", "Frontend Developer"],
                       autoStart: true,
                       loop: true,
                       deleteSpeed: 50,
@@ -62,35 +71,62 @@ export const Hero = () => {
                   />
                 </h1>
 
-                <div className="hero-image-box d-md-none text-center">
-                  <img src="assets/img/hero/me.png" alt="" />
-                </div>
+                <motion.p
+                  className="lead"
+                  variants={fadeIn("up", 0.4)}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  I break down complex user experience problems to create integrity-focused
+                  solutions that connect billions of people.
+                </motion.p>
 
-                <p className="lead">I break down complex user experinece problems to create integritiy focussed solutions that connect billions of people</p>
-                <div className="button-box flexG" style={{ display: 'flex', justifyContent: 'center', placeItems: 'center' }}>
-                  <a href="UzairCV.pdf" className="btn tj-btn-secondary" style={{ fontSize: '10px' }} download>
+                {/* Buttons & Social Icons */}
+                <motion.div
+                  className="button-box flexG"
+                  style={{ display: "flex", justifyContent: "center", placeItems: "center" }}
+                  variants={fadeIn("up", 0.5)}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  <a href="UzairCV.pdf" className="btn tj-btn-secondary" download>
                     My CV <FaDownload size={10} />
                   </a>
+
                   <ul className="ul-reset social-icons">
                     {socialIcons.map((icon) => (
-                      <li key={icon.id}>
+                      <motion.li key={icon.id} whileHover={{ scale: 1.1 }}>
                         <a href={icon.url} target="_blank" rel="noopener noreferrer">
                           {icon.icon}
                         </a>
-                      </li>
+                      </motion.li>
                     ))}
                   </ul>
-                </div>
+                </motion.div>
               </div>
-            </div>
-            <div className="right w-half">
+            </motion.div>
+
+            {/* Right Section (Image) */}
+            <motion.div
+              className="right w-half"
+              variants={fadeIn("right", 0.3)}
+              initial="hidden"
+              animate="visible"
+            >
               <div className="hero-image-box text-center">
                 <img src="../images/common/uzair.png" alt="logo" />
               </div>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="funfact-area grid4" style={{ textAlign: 'center' }}>
+          {/* Funfact Area */}
+          <motion.div
+            className="funfact-area grid4"
+            style={{ textAlign: "center" }}
+            variants={fadeIn("up", 0.5)}
+            initial="hidden"
+            animate="visible"
+          >
             {hero.map((item, index) => (
               <div className="funfact-item" key={index}>
                 <div className="number">
@@ -99,7 +135,7 @@ export const Hero = () => {
                 <div className="text">{item.title}</div>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
     </>
