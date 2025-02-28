@@ -25,8 +25,8 @@ export const hero = [
   },
   {
     id: 4,
-    title: "Semester",
-    text: "8th",
+    title: "Fresh  Graduate",
+    text: "**",
   },
 
 ];
@@ -50,6 +50,10 @@ export const service = [
     id: 4,
     title: "Search Engine Optimization",
     text: "I can do the SEO best practices for your Apps and Websites",
+  }, {
+    id: 5,
+    title: "Web Development",
+    text: "I can develop the websites",
   },
 ];
 

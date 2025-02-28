@@ -19,7 +19,7 @@ export const Hero = () => {
     {
       id: 2,
       icon: <FaLinkedinIn size={20} />,
-      url: 'https://www.linkedin.com/in/muhammad-uzair-nisar-629490248/',
+      url: 'www.linkedin.com/in/muhammad-uzair-nisar',
 
     },
     {
@@ -53,7 +53,7 @@ export const Hero = () => {
                 <h1 className="hero-title">
                   <Typewriter
                     options={{
-                      strings: ['React Developer', 'Software Engineer'],
+                      strings: ['ReactJs Developer', 'Software Engineer', 'Frontend Developer'],
                       autoStart: true,
                       loop: true,
                       deleteSpeed: 50,
