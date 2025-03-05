@@ -1,16 +1,31 @@
 import { FaArrowRight } from "react-icons/fa6";
 import { projectsDetails } from "../../assets/data/data";
+import { motion } from "framer-motion";
+
+const fadeIn = (direction = "up", delay = 0) => {
+  return {
+    hidden: {
+      opacity: 0,
+      y: direction === "up" ? 50 : -50,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, delay },
+    },
+  };
+};
 
 export const PortfolioDetails = () => {
   return (
     <>
-      {projectsDetails.map((project) => (
-        <div className="popup_content_area" key={project.id}>
-          <div className="popup_modal_img">
+      {projectsDetails.map((project, index) => (
+        <motion.div className="popup_content_area" key={project.id} initial="hidden" animate="visible" variants={fadeIn("up", index * 0.2)}>
+          <motion.div className="popup_modal_img" variants={fadeIn("up", 0.2)}>
             <img src="../images/portfolio/p4.jpg" alt="" />
-          </div>
+          </motion.div>
 
-          <div className="popup_modal_content">
+          <motion.div className="popup_modal_content" variants={fadeIn("up", 0.3)}>
             <div className="container">
               <div className="portfolio_info">
                 <div className="portfolio_info_text">
@@ -31,7 +46,7 @@ export const PortfolioDetails = () => {
                     <div className="key">Client</div>
                     <div className="value">{project.client}</div>
                   </div>
-                 
+
                   <div className="info_item">
                     <div className="key">Designer</div>
                     <div className="value">
@@ -41,24 +56,24 @@ export const PortfolioDetails = () => {
                 </div>
               </div>
 
-              <div className="portfolio_gallery grid2">
+              <motion.div className="portfolio_gallery grid2" variants={fadeIn("up", 0.4)}>
                 {project.images.map((image, index) => (
-                  <div className="gallery_item" key={index}>
+                  <motion.div className="gallery_item" key={index} variants={fadeIn("up", index * 0.2)}>
                     <img src={image} alt="" />
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
 
-              <div className="portfolio_description">
+              <motion.div className="portfolio_description" variants={fadeIn("up", 0.5)}>
                 <h2 className="title">Project Description</h2>
                 <div className="desc">
                   <p>{project.description}</p>
                   <br />
                   <p>{project.description2}</p>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="portfolio_story_approach">
+              <motion.div className="portfolio_story_approach" variants={fadeIn("up", 0.6)}>
                 <div className="portfolio_story">
                   <div className="story_title">
                     <h4 className="title">The story</h4>
@@ -75,9 +90,9 @@ export const PortfolioDetails = () => {
                     <p>{project.approach}</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
-            <div className="portfolio_navigation">
+            <motion.div className="portfolio_navigation" variants={fadeIn("up", 0.7)}>
               <div className="navigation_item prev-project">
                 <a href="#" className="project">
                   <i className="fal fa-arrow-left"></i>
@@ -99,9 +114,9 @@ export const PortfolioDetails = () => {
                   </i>
                 </a>
               </div>
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
       ))}
     </>
   );

@@ -1,10 +1,25 @@
 import { skillsData } from "../assets/data/data";
+import { motion } from "framer-motion";
+
+const fadeIn = (direction = "up", delay = 0) => {
+  return {
+    hidden: {
+      opacity: 0,
+      y: direction === "up" ? 50 : -50,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, delay },
+    },
+  };
+};
 
 export const Skill = () => {
   return (
     <>
       <section className="skills-section">
-        <div className="container">
+        <motion.div className="container" initial="hidden" animate="visible" variants={fadeIn("up", 0.2)}>
           <div className="section-header text-center">
             <h2 className="section-title">My Skills</h2>
             <p>
@@ -13,17 +28,17 @@ export const Skill = () => {
             </p>
           </div>
 
-          <div className="skills-widget grid6">
-            {skillsData.map((skill) => (
-              <div className="skill-item" key={skill.id}>
+          <motion.div className="skills-widget grid6" variants={fadeIn("up", 0.3)}>
+            {skillsData.map((skill, index) => (
+              <motion.div className="skill-item" key={skill.id} variants={fadeIn("up", index * 0.2)}>
                 <div className="icon-box">
                   <img src={skill.icon} alt={skill.name} />
                 </div>
                 <p>{skill.name}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
     </>
   );

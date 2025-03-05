@@ -1,6 +1,21 @@
 import { useState } from "react";
 import { projects } from "../../assets/data/data";
 import { GoArrowUpRight } from "react-icons/go";
+import { motion } from "framer-motion";
+
+const fadeIn = (direction = "up", delay = 0) => {
+  return {
+    hidden: {
+      opacity: 0,
+      y: direction === "up" ? 50 : -50,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, delay },
+    },
+  };
+};
 
 export const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -15,13 +30,13 @@ export const Portfolio = () => {
   return (
     <>
       <section className="portfolio-section">
-        <div className="container">
+        <motion.div className="container" initial="hidden" animate="visible" variants={fadeIn("up", 0.2)}>
           <div className="section-header text-center">
             <h2 className="section-title">My Recent Works</h2>
             <p>We put your ideas and thus your wishes in the form of a unique web project that inspires you and your customers.</p>
           </div>
 
-          <div className="portfolio-filter text-center">
+          <motion.div className="portfolio-filter text-center" variants={fadeIn("up", 0.3)}>
             <div className="button-group filter-button-group">
               {["All", "UX/UI", "Websites"].map(category => (
                 <button
@@ -34,12 +49,12 @@ export const Portfolio = () => {
               ))}
               <div className="active-bg"></div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="portfolio-box">
+          <motion.div className="portfolio-box" variants={fadeIn("up", 0.4)}>
             <div className="grid2">
-              {filterProjects().map((project) => (
-                <div className="portfolio-item branding" key={project.id}>
+              {filterProjects().map((project, index) => (
+                <motion.div className="portfolio-item branding" key={project.id} variants={fadeIn("up", index * 0.2)}>
                   <div className="image-box">
                     <a href={project.repo} target="_blank" rel="noopener noreferrer">
                       <img src={project.cover} alt={project.title} />
@@ -47,7 +62,7 @@ export const Portfolio = () => {
                   </div>
                   <div className="content-box">
                     <a href={project.repo} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-                      <h5 className="portfolio-title" >{project.title}</h5>
+                      <h5 className="portfolio-title">{project.title}</h5>
                     </a>
                     <p>{project.desc}</p>
                     <a href={project.repo} target="_blank" rel="noopener noreferrer">
@@ -56,12 +71,11 @@ export const Portfolio = () => {
                       </i>
                     </a>
                   </div>
-                  <h5 className="portfolio-title">{project.title}</h5>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
     </>
   );
