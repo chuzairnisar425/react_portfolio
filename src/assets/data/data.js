@@ -16,7 +16,7 @@ export const hero = [
   {
     id: 2,
     title: "Project Completed",
-    text: "15+",
+    text: "4",
   },
   {
     id: 3,

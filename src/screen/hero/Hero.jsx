@@ -114,7 +114,7 @@ export const Hero = () => {
               animate="visible"
             >
               <div className="hero-image-box text-center">
-                <img src="../images/common/uzair.png" alt="logo" />
+                <img src="../images/common/uzair.jpg" alt="logo" />
               </div>
             </motion.div>
           </div>
