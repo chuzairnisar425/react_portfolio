@@ -35,18 +35,7 @@ export const Hero = () => {
   return (
     <>
       <section className="hero-section">
-        <motion.div
-          className="intro_text"
-          variants={fadeIn("down", 0.2)}
-          initial="hidden"
-          animate="visible"
-        >
-          <svg viewBox="0 0 1320 300">
-            <text x="50%" y="50%" textAnchor="middle">
-              HI
-            </text>
-          </svg>
-        </motion.div>
+
 
         <div className="container">
           <div className="content flexSB">
@@ -84,7 +73,7 @@ export const Hero = () => {
                 {/* Buttons & Social Icons */}
                 <motion.div
                   className="button-box flexG"
-                  style={{ display: "flex", justifyContent: "center", placeItems: "center" }}
+                  style={{ display: "flex", placeItems: "center" }}
                   variants={fadeIn("up", 0.5)}
                   initial="hidden"
                   animate="visible"

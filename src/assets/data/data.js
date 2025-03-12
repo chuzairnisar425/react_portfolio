@@ -60,6 +60,17 @@ export const service = [
 export const projects = [
   {
     id: 1,
+    title: "Smart Cricket",
+    desc: "I've created an app called smartCricket using Reactjs Tailwind css,Smart Cricket combines cutting-edge AI and machine learning to deliver real-time cricket insights and predictions.",
+    cover: "../images/portfolio/smartcricket.png",
+    category: "Websites",
+
+    repo: 'https://smartcricket.netlify.app/'
+
+
+  },
+  {
+    id: 9,
     title: "Movie Finder",
     desc: "I've created an app called MovieFinder using React, where I utilize an API to filter and search for movies..",
     cover: "../images/portfolio/moviefinder.png",
