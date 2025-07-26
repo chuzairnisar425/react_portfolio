@@ -21,8 +21,8 @@
   --tj-black-2: #050709;
   --tj-heading-primary: #102039;
   --tj-heading-secondary: #ea1826;
-  --tj-theme-primary: #43b0c8;
-  --tj-theme-secondary: #1e75a3;
+  --tj-theme-primary: #e3414c;
+  --tj-theme-secondary: #4e0a0e;
   --tj-theme-accent-1: #0f0715;
   --tj-theme-accent-2: #140c1c;
   --tj-grey-1: #747779;
@@ -590,7 +590,7 @@ header .logo-box {
   width: 150px;
 } */
 .firstName {
-  color: white;
+  color: #d14750;
   font-size: 25px;
   font-weight: bold;
 
@@ -598,7 +598,7 @@ header .logo-box {
 
 .lastName {
 
-  color: skyblue;
+  color: #ec0514;
   font-size: 25px;
   font-weight: bold;
 }
@@ -1311,6 +1311,7 @@ header .logo-box {
   font-size: 25px;
   text-transform: uppercase;
   margin-bottom: 8px;
+  
 }
 
 /* --------------   End: Resume Section --------------*/
@@ -2333,13 +2334,13 @@ footer img {
   }
 
   .resume-widget .resume-item .resume-title {
-    font-size: 15px;
+    font-size: 25px;
   }
 
-  .resume-widget .resume-item .resume-title .institute {
+  .resume-widget .resume-item  .institute {
     font-size: 12px;
+    /* color:red */
   }
-
   .skills-section {
     padding-bottom: 60px;
     padding-top: 60px;

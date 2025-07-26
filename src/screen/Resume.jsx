@@ -33,8 +33,8 @@ export const Resume = () => {
               {experienceData.map((item, index) => (
                 <motion.div className="resume-item" key={item.id} variants={fadeIn("up", index * 0.2)}>
                   <div className="time">{item.time}</div>
-                  <h3 className="resume-title">{item.title}</h3>
-                  <div className="institute">{item.institute}</div>
+                  <h3 className="resume-title">{item.institute}</h3>
+                  <div className="institute">{item.title}</div>
                   <div className="institute" style={{ textAlign: "justify" }}>{item.desc}</div>
                 </motion.div>
               ))}
