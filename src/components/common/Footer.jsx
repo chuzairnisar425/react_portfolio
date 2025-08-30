@@ -10,7 +10,7 @@ export const Footer = () => {
         <div className="container text-center">
           <div className="logo-box" style={{ marginBottom: '15px' }}>
             <NavLink to="/" style={{ textDecoration: 'none' }}>
-              <span className="firstName">._Uzair</span><span className="lastName">Nisar_.</span>
+              <span className="firstName">{'<UzairNisar/>'}</span>
               {/* <img src="../images/common/mylogo.png" alt="logo" /> */}
             </NavLink>
           </div>

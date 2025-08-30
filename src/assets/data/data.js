@@ -147,15 +147,22 @@ export const projects = [
 ];
 
 export const experienceData = [
- {
+   {
     id: 1,
-    time: "April'2025 - Present",
+    time: "August'2025 - Present",
+    title: "Frontend Developer",
+    institute: "Zenith innovations",
+    desc: 'At Zenith Innovations, I am working on a Lead Finder extension available in the Zoho CRM Marketplace, where I handle the frontend interface to search and visualize businesses using Google Maps as well as the individuals on LinkedIn. I solved the problem of simplifying lead generation by enabling users to directly import and manage searched business data inside Zoho CRM.',
+  },
+  {
+    id: 2,
+    time: "April'2025 - July'2025",
     title: "ReactJs Developer",
     institute: "NERDFLOW PVT LTD",
     desc: 'At NERDFLOW, I Worked on a company product that was targeted the niche of restaurant, worked on a Digital menu-items order management as well where we can track the order from both user end and admin end.',
   },
   {
-    id: 2,
+    id: 3,
     time: "June'2024 - August'2024",
     title: "Frontend Developer",
     institute: "Appium Logics Solution",
@@ -163,7 +170,7 @@ export const experienceData = [
 
   },
   {
-    id: 3,
+    id: 4,
     time: "May'2023 - August'2023",
     title: "Frontend Developer",
     institute: "Bytewise PVT LTD",
@@ -252,9 +259,9 @@ export const skillsData = [
 // ];
 
 export const blogs = [
-    {
+   {
     id: 1,
-    image: "../images/blog/nerdflow.webp",
+    image: "../images/blog/zenith.png",
     category: "Click here",
     categoryLink: "/",
     // date: "April 01, 2025",
@@ -263,6 +270,15 @@ export const blogs = [
   },
   {
     id: 2,
+    image: "../images/blog/nerdflow.webp",
+    category: "Click here",
+    categoryLink: "/",
+    // date: "April 01, 2025",
+    // commentCount: 0,
+    title: "ReactJs Developer",
+  },
+  {
+    id: 3,
     image: "../images/blog/frontend.jpeg",
     category: "Click here",
     categoryLink: "https://www.linkedin.com/posts/muhammad-uzair-nisar_welcome-newhire-teamlead-activity-7178051954646913024-k1Qv?utm_source=share&utm_medium=member_desktop",
@@ -271,7 +287,7 @@ export const blogs = [
     title: "Frontend Developer",
   },
   {
-    id: 3,
+    id: 4,
     image: "../images/blog/beta.jpg",
     category: "Click here",
     categoryLink: "https://www.linkedin.com/posts/muhammad-uzair-nisar_ascending-to-beta-level-activity-7191870403177234433-Z-zN?utm_source=share&utm_medium=member_desktop",
@@ -280,7 +296,7 @@ export const blogs = [
     title: "Beta MLSA",
   },
   {
-    id: 4,
+    id: 5,
     image: "../images/blog/alpha.jpeg",
     category: "Click here",
     categoryLink: "https://www.linkedin.com/posts/muhammad-uzair-nisar_mlsa-alphamilestone-techjourney-activity-7142574768112803840-rHAL?utm_source=share&utm_medium=member_desktop",
@@ -290,7 +306,7 @@ export const blogs = [
     title: "Alpha MLSA",
   },
   {
-    id: 5,
+    id: 6,
     image: "../images/blog/msla.jpeg",
     category: "Click here",
     categoryLink: "https://www.linkedin.com/posts/muhammad-uzair-nisar_microsoftlearnstudentambassador-mlsa-techcommunity-activity-7136594516949544960-xr_C?utm_source=share&utm_medium=member_desktop",
@@ -300,7 +316,7 @@ export const blogs = [
     title: "DIve into MLSA",
   },
   {
-    id: 6,
+    id: 7,
     image: "../images/blog/bytewise.jpeg",
     category: "Click here",
     categoryLink: "https://www.linkedin.com/posts/muhammad-uzair-nisar_bytewise-frontenddevelopment-intenship-activity-7087008852897931264-kaE2?utm_source=share&utm_medium=member_desktop",
@@ -310,7 +326,7 @@ export const blogs = [
     title: "Exbytewise Intern",
   },
   {
-    id: 7,
+    id: 8,
     image: "../images/blog/ibmcertified.png",
     category: "Click here",
     categoryLink: "https://www.linkedin.com/posts/muhammad-uzair-nisar_front-end-development-with-react-was-issued-activity-7084489366198267905-Y9Gb?utm_source=share&utm_medium=member_desktop",

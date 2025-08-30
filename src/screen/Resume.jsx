@@ -28,17 +28,25 @@ export const Resume = () => {
                 <PiGraduationCap size={40} /> My Experience
               </h2>
             </div>
+<div className="resume-widget">
+  {experienceData.map((item, index) => (
+    <motion.div
+      className="resume-item"
+      key={item.id}
+      variants={fadeIn("up", index * 0.2)}
+    >
+      <div className="resume-header" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <h3 className="resume-title">{item.institute}</h3>
+        <div className="time">{item.time}</div>
+      </div>
+      <div className="institute">{item.title}</div>
+      <div className="institute" style={{ textAlign: "justify" }}>
+        {item.desc}
+      </div>
+    </motion.div>
+  ))}
+</div>
 
-            <div className="resume-widget">
-              {experienceData.map((item, index) => (
-                <motion.div className="resume-item" key={item.id} variants={fadeIn("up", index * 0.2)}>
-                  <div className="time">{item.time}</div>
-                  <h3 className="resume-title">{item.institute}</h3>
-                  <div className="institute">{item.title}</div>
-                  <div className="institute" style={{ textAlign: "justify" }}>{item.desc}</div>
-                </motion.div>
-              ))}
-            </div>
           </motion.div>
 
           <motion.div className="w-half" variants={fadeIn("right", 0.3)}>

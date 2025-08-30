@@ -1265,6 +1265,13 @@ header .logo-box {
   margin-right: 100px;
 }
 
+.resume-widget .resume-item .resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
 .resume-widget .resume-item {
   position: relative;
   padding: 20px 30px;
@@ -1298,7 +1305,7 @@ header .logo-box {
 
 .resume-widget .resume-item .time {
   color: var(--tj-theme-primary);
-  font-size: 20px;
+  font-size: 12px;
   font-weight: 800;
   margin-bottom: 8px;
 }

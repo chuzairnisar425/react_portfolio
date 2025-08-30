@@ -35,7 +35,7 @@ export const Header = () => {
         <div className="container flexSB">
           <div className="logo-box">
             <NavLink to="/" style={{ textDecoration: 'none' }}>
-              <span className="firstName">._Uzair</span><span className="lastName">Nisar_.</span>
+              <span className="firstName">{'<UzairNisar/>'}</span>
               {/* <img src="../images/common/mylogo.png" alt="logo" /> */}
             </NavLink>
           </div>

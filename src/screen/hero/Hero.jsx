@@ -6,7 +6,8 @@ import { FaDownload } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 import { hero } from "../../assets/data/data";
 import Typewriter from "typewriter-effect";
-
+import { ShimmerCircularImage } from "react-shimmer-effects";
+import { useState } from "react";
 // Animation Variants
 const fadeIn = (direction = "up", delay = 0) => {
   return {
@@ -25,6 +26,8 @@ const fadeIn = (direction = "up", delay = 0) => {
 };
 
 export const Hero = () => {
+    const [imageLoaded, setImageLoaded] = useState(false);
+
   const socialIcons = [
     { id: 1, icon: <FaXTwitter size={17} />, url: "https://twitter.com/ChUzair542" },
     { id: 2, icon: <FaLinkedinIn size={20} />, url: "https://linkedin.com/in/muhammad-uzair-nisar" },
@@ -95,17 +98,18 @@ export const Hero = () => {
               </div>
             </motion.div>
 
-            {/* Right Section (Image) */}
-            <motion.div
-              className="right w-half"
-              variants={fadeIn("right", 0.3)}
-              initial="hidden"
-              animate="visible"
-            >
-              <div className="hero-image-box text-center">
-                <img src="../images/common/uzair.jpg" alt="logo" />
-              </div>
-            </motion.div>
+            {/* Right Section (Image with shimmer) */}
+          <motion.div className="right w-half" variants={fadeIn("right", 0.3)} initial="hidden" animate="visible" >
+            <div className="hero-image-box text-center">
+              {!imageLoaded && <ShimmerCircularImage size={250} />}
+              <img
+                src="../images/common/uzair.jpg"
+                alt="logo"
+                style={{ display: imageLoaded  }}
+                onLoad={() => setImageLoaded(true)}
+              />
+            </div>
+          </motion.div>
           </div>
 
           {/* Funfact Area */}
