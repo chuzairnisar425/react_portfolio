@@ -11,7 +11,7 @@ import { IoLogoGithub } from "react-icons/io";
 export const Contact = () => {
   const socialIcons = [
     { id: 1, icon: <FaXTwitter size={17} />, url: 'https://twitter.com/ChUzair542' },
-    { id: 2, icon: <FaLinkedinIn size={20} />, url: 'https://www.linkedin.com/in/muhammad-uzair-nisar-629490248/' },
+    { id: 2, icon: <FaLinkedinIn size={20} />, url: 'https://www.linkedin.com/in/muhammad-uzair-nisar425/' },
     { id: 3, icon: <IoLogoGithub size={20} />, url: 'https://github.com/chuzairnisar425' },
     { id: 4, icon: <FaInstagram size={20} />, url: 'https://www.instagram.com/uzair._.nisar/' },
   ];

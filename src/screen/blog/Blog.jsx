@@ -22,9 +22,9 @@ export const Blog = () => {
                   <a href={blog.link}>
                     <img src={blog.image} alt="" />
                   </a>
-                  <a href={blog.categoryLink} className="category" target="_blank">
+                  {/* <a href={blog.categoryLink} className="category" target="_blank">
                     {blog.category}
-                  </a>
+                  </a> */}
                 </div>
                 <div className="blog-content">
                   <div className="blog-meta">

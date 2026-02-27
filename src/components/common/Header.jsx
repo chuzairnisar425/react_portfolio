@@ -60,7 +60,7 @@ export const Header = () => {
 
           <div className="flexSB">
             <div className="header-button">
-              <a href='https://www.linkedin.com/in/muhammad-uzair-nisar-629490248/' target="_blank" rel="noopener noreferrer" className="btn tj-btn-primary">
+              <a href='https://www.linkedin.com/in/muhammad-uzair-nisar425/' target="_blank" rel="noopener noreferrer" className="btn tj-btn-primary">
                 Hire me!
               </a>
             </div>

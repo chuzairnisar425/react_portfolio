@@ -34,7 +34,7 @@ export const Footer = () => {
           <div className="copy-text" >
             <p style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               &copy; 2025 Made with  <HiHeart style={{ color: 'red', marginLeft: '3px', marginRight: '3px ' }} />  by
-              <a href="https://www.linkedin.com/in/muhammad-uzair-nisar-629490248/" target="_blank" style={{ marginLeft: '5px' }}>
+              <a href="https://www.linkedin.com/in/muhammad-uzair-nisar425/" target="_blank" style={{ marginLeft: '5px' }}>
                 <span style={{ color: 'white' }}>  UzairNisar</span>
               </a>
             </p>
