@@ -6,7 +6,6 @@ import { FaDownload } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 import { hero } from "../../assets/data/data";
 import Typewriter from "typewriter-effect";
-import { ShimmerCircularImage } from "react-shimmer-effects";
 import { useState } from "react";
 // Animation Variants
 const fadeIn = (direction = "up", delay = 0) => {
@@ -101,7 +100,6 @@ export const Hero = () => {
             {/* Right Section (Image with shimmer) */}
           <motion.div className="right w-half" variants={fadeIn("right", 0.3)} initial="hidden" animate="visible" >
             <div className="hero-image-box text-center">
-              {!imageLoaded && <ShimmerCircularImage size={250} />}
               <img
                 src="../images/common/uzair.jpg"
                 alt="logo"

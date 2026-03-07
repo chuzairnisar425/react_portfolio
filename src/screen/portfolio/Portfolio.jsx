@@ -2,7 +2,6 @@ import { useState } from "react";
 import { projects } from "../../assets/data/data";
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
-import { ShimmerThumbnail } from "react-shimmer-effects"; // 👈 shimmer
 
 const fadeIn = (direction = "up", delay = 0) => {
   return {
@@ -80,9 +79,7 @@ export const Portfolio = () => {
                     rel="noopener noreferrer"
                   >
                     {/* Shimmer until image loads */}
-                    {!loadedImages[project.id] && (
-                      <ShimmerThumbnail height={200} rounded /> // 👈 adjust size
-                    )}
+                   
                     <img
                       src={project.cover}
                       alt={project.title}
