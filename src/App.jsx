@@ -1,66 +1,26 @@
-import { useEffect, useState } from "react";
-import { Home, Layout, PortfolioDetails } from "./utils/Router";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { MotionConfig } from "framer-motion";
+import { Nav } from "./components/Nav";
+import { Hero } from "./components/Hero";
+import { Profile } from "./components/Profile";
+import { Experience } from "./components/Experience";
+import { Work } from "./components/Work";
+import { Toolkit, Recognition } from "./components/Toolkit";
+import { Contact, Footer } from "./components/Contact";
 
-function App() {
-  const [showLoader, setShowLoader] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowLoader(false);
-    }, 1800);
-
-    return () => clearTimeout(timer);
-  }, []);
-
+export default function App() {
   return (
-    <>
-      {showLoader && (
-        <div className="preloader">
-          <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
-            <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
-          </svg>
-
-          <div className="preloader-heading">
-            <div className="load-text">
-              <span>L</span>
-              <span>o</span>
-              <span>a</span>
-              <span>d</span>
-              <span>i</span>
-              <span>n</span>
-              <span>g</span>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {!showLoader && (
-        <>
-          <BrowserRouter>
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <Layout>
-                    <Home />
-                  </Layout>
-                }
-              />
-              <Route
-                path="/details"
-                element={
-                  <Layout>
-                    <PortfolioDetails />
-                  </Layout>
-                }
-              />
-            </Routes>
-          </BrowserRouter>
-        </>
-      )}
-    </>
+    <MotionConfig reducedMotion="user">
+      <Nav />
+      <main id="main">
+        <Hero />
+        <Profile />
+        <Experience />
+        <Work />
+        <Toolkit />
+        <Recognition />
+        <Contact />
+      </main>
+      <Footer />
+    </MotionConfig>
   );
 }
-
-export default App;
