@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 import { nav, profile, socials } from "../data/content";
 import { ease } from "./ease";
+import { Arrow } from "./ui";
 
 function usePakistanTime() {
   const fmt = () =>
@@ -61,7 +62,7 @@ export function Nav() {
   return (
     <>
       <a className="skip-link" href="#main">Skip to content</a>
-      <header className={`nav ${scrolled ? "nav--solid" : ""}`}>
+      <header className={`nav ${scrolled ? "nav--solid" : ""} ${open ? "nav--menu" : ""}`}>
         <motion.div className="nav__progress" style={{ scaleX: progress }} aria-hidden="true" />
         <div className="nav__inner">
           <a href="#top" className="nav__mark" aria-label="Uzair Nisar, back to top">
@@ -110,31 +111,49 @@ export function Nav() {
             exit={{ clipPath: "inset(0 0 100% 0)" }}
             transition={{ duration: 0.55, ease }}
           >
+            <p className="menu__eyebrow mono">
+              <span>Menu</span>
+              <span>{String(nav.length).padStart(2, "0")} sections</span>
+            </p>
+
             <nav className="menu__links" aria-label="Menu">
               {nav.map((item, i) => (
                 <motion.a
                   key={item.id}
                   href={`#${item.id}`}
                   onClick={() => setOpen(false)}
-                  initial={{ opacity: 0, y: 30 }}
+                  className={`menu__link ${active === item.id ? "is-active" : ""}`}
+                  aria-current={active === item.id ? "true" : undefined}
+                  initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.15 + i * 0.05, duration: 0.5, ease }}
+                  transition={{ delay: 0.12 + i * 0.04, duration: 0.45, ease }}
                 >
-                  <span className="mono">0{i + 1}</span>
-                  {item.label}
+                  <span className="mono menu__num">0{i + 1}</span>
+                  <span className="menu__label">{item.label}</span>
+                  <Arrow className="menu__arrow" />
                 </motion.a>
               ))}
             </nav>
-            <div className="menu__foot">
-              <a href={`mailto:${profile.email}`}>{profile.email}</a>
-              <div className="menu__socials">
+
+            <motion.div
+              className="menu__foot"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.35, duration: 0.45, ease }}
+            >
+              <p className="mono menu__eyebrow">Get in touch</p>
+              <a className="menu__email" href={`mailto:${profile.email}`}>{profile.email}</a>
+              <ul className="menu__socials">
                 {socials.map((s) => (
-                  <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer">
-                    {s.label}
-                  </a>
+                  <li key={s.label}>
+                    <a href={s.url} target="_blank" rel="noopener noreferrer">{s.label}</a>
+                  </li>
                 ))}
-              </div>
-            </div>
+              </ul>
+              <a href={profile.cv} download className="btn btn--signal menu__cv">
+                Download résumé <span aria-hidden="true">↓</span>
+              </a>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

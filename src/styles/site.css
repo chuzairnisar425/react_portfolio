@@ -378,49 +378,136 @@ a:hover > .arrow {
   z-index: 40;
   background: var(--ink);
   color: var(--paper);
-  padding: calc(var(--nav-h) + 32px) var(--gutter) 32px;
+  padding: calc(var(--nav-h) + 24px) var(--gutter) 28px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 32px;
   overflow-y: auto;
+}
+
+.menu__eyebrow {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted-ink);
+  font-size: 11px;
+}
+
+.menu__eyebrow span:first-child,
+.menu__foot > .menu__eyebrow {
+  color: var(--signal);
 }
 
 .menu__links {
   display: flex;
   flex-direction: column;
+  border-top: 1px solid var(--line-ink);
+  margin-top: -18px;
 }
 
-.menu__links a {
-  display: flex;
-  align-items: baseline;
-  gap: 14px;
-  font-size: clamp(2.6rem, 11vw, 4.5rem);
-  font-weight: 700;
-  letter-spacing: -0.035em;
-  line-height: 1.1;
-  padding: 6px 0;
+.menu__link {
+  display: grid;
+  grid-template-columns: 32px 1fr 20px;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
   border-bottom: 1px solid var(--line-ink);
+  transition: color 0.3s;
 }
 
-.menu__links a .mono {
+.menu__num {
+  color: var(--muted-ink);
+  font-size: 11px;
+}
+
+.menu__label {
+  font-size: clamp(1.25rem, 5.4vw, 1.6rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.menu__arrow {
+  width: 16px;
+  height: 16px;
+  color: var(--muted-ink);
+  transition: transform 0.35s var(--ease), color 0.3s;
+}
+
+.menu__link:hover .menu__arrow,
+.menu__link.is-active .menu__arrow {
+  color: var(--signal);
+  transform: translate(2px, -2px);
+}
+
+.menu__link.is-active .menu__num,
+.menu__link.is-active .menu__label {
   color: var(--signal);
 }
 
 .menu__foot {
+  margin-top: auto;
   display: grid;
   gap: 14px;
-  padding-top: 32px;
-  color: var(--muted-ink);
+}
+
+.menu__email {
+  font-size: 17px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
 }
 
 .menu__socials {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 20px;
+  gap: 8px;
 }
 
-.menu__foot a:hover {
+.menu__socials a {
+  display: inline-block;
+  padding: 7px 14px;
+  border: 1px solid var(--line-ink);
+  border-radius: 999px;
+  font-size: 14px;
+  color: var(--muted-ink);
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.menu__socials a:hover,
+.menu__email:hover {
   color: var(--paper);
+  border-color: var(--paper);
+}
+
+.menu__cv {
+  justify-content: center;
+  margin-top: 6px;
+}
+
+/* Header while the menu is open: light text on the dark menu. */
+.nav--menu,
+.nav--menu.nav--solid {
+  background: var(--ink);
+  color: var(--paper);
+  border-bottom-color: var(--line-ink);
+}
+
+.nav--menu .nav__monogram {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.nav--menu .nav__toggle {
+  border-color: var(--paper);
+}
+
+.nav--menu .nav__time {
+  color: var(--muted-ink);
+}
+
+.nav--menu .nav__right .btn--ink {
+  background: var(--paper);
+  color: var(--ink);
+  border-color: var(--paper);
 }
 
 /* ---------- Hero ---------- */
@@ -2099,4 +2186,82 @@ a:hover > .arrow {
   .dialog {
     box-shadow: 8px 8px 0 var(--signal);
   }
+}
+
+/* ---------- Intro loader ---------- */
+
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: var(--ink);
+  color: var(--paper);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(20px, 3vw, 40px) var(--gutter);
+}
+
+.loader__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--muted-ink);
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line-ink);
+}
+
+.loader__mark {
+  align-self: center;
+  display: grid;
+  place-items: center;
+  width: clamp(88px, 11vw, 132px);
+  aspect-ratio: 1;
+  background: var(--paper);
+  color: var(--ink);
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.03em;
+  position: relative;
+}
+
+.loader__mark::after {
+  content: "";
+  position: absolute;
+  right: 12%;
+  bottom: 12%;
+  width: 12%;
+  height: 12%;
+  background: var(--signal);
+}
+
+.loader__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  padding-bottom: 18px;
+}
+
+.loader__count {
+  font-size: clamp(5rem, 17vw, 13rem);
+  font-weight: 800;
+  line-height: 0.8;
+  letter-spacing: -0.06em;
+  font-variant-numeric: tabular-nums;
+}
+
+.loader__label {
+  color: var(--muted-ink);
+  padding-bottom: 6px;
+}
+
+.loader__bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 6px;
+  background: var(--signal);
+  transform-origin: 0 50%;
 }

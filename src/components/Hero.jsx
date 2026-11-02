@@ -4,7 +4,7 @@ import { heroBuilds, marquee, profile } from "../data/content";
 import { Arrow } from "./ui";
 import { ease } from "./ease";
 
-function Letters({ text, delay = 0 }) {
+function Letters({ text, delay = 0, ready }) {
   return (
     <span className="letters" aria-hidden="true">
       {text.split("").map((ch, i) => (
@@ -12,7 +12,7 @@ function Letters({ text, delay = 0 }) {
           <motion.span
             className="letters__ch"
             initial={{ y: "105%" }}
-            animate={{ y: "0%" }}
+            animate={{ y: ready ? "0%" : "105%" }}
             transition={{ duration: 0.9, ease, delay: delay + i * 0.04 }}
           >
             {ch}
@@ -54,10 +54,11 @@ const spec = [
   ["Based", profile.location],
 ];
 
-export function Hero() {
+// Everything waits for `ready`, so the intro plays after the loader lifts.
+export function Hero({ ready = true }) {
   const fade = (delay) => ({
     initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
+    animate: ready ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 },
     transition: { duration: 0.8, ease, delay },
   });
 
@@ -78,9 +79,9 @@ export function Hero() {
                 <em>Muhammad</em>
               </motion.span>
               <span className="hero__line">
-                <Letters text="Uzair" delay={0.2} />
+                <Letters text="Uzair" delay={0.2} ready={ready} />
                 <span className="hero__space" aria-hidden="true" />
-                <Letters text="Nisar" delay={0.35} />
+                <Letters text="Nisar" delay={0.35} ready={ready} />
                 <motion.span className="hero__dot" aria-hidden="true" {...fade(0.9)}>.</motion.span>
               </span>
             </h1>
@@ -102,14 +103,14 @@ export function Hero() {
           <motion.figure
             className="hero__portrait"
             initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={ready ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
             transition={{ duration: 1, ease, delay: 0.4 }}
           >
             <span className="hero__frame">
               <motion.span
                 className="hero__reveal"
                 initial={{ clipPath: "inset(100% 0 0 0)" }}
-                animate={{ clipPath: "inset(0% 0 0 0)" }}
+                animate={{ clipPath: ready ? "inset(0% 0 0 0)" : "inset(100% 0 0 0)" }}
                 transition={{ duration: 1.1, ease, delay: 0.5 }}
               >
                 <img

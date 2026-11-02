@@ -9,7 +9,7 @@ function contactApi(env) {
   return {
     name: 'contact-api',
     configureServer(server) {
-      for (const key of ['RESEND_API_KEY', 'CONTACT_TO', 'CONTACT_FROM']) {
+      for (const key of ['RESEND_API_KEY', 'CONTACT_TO', 'CONTACT_FROM', 'CONTACT_AUTOREPLY']) {
         if (env[key] && !process.env[key]) process.env[key] = env[key]
       }
 
