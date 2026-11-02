@@ -55,14 +55,15 @@ export const experience = [
     role: "Next.js Developer",
     mode: "Remote",
     summary:
-      "Building EveryClinic, a healthcare SaaS platform, across its Admin, Practice and Patient portals.",
+      "Building healthcare products: EveryClinic, a SaaS platform with Admin, Practice and Patient portals, and the patient portal for Second Opinion Radiology.",
     points: [
+      "Main contributor to the Second Opinion Radiology patient portal: booking, Stripe payments, scan upload and case tracking.",
       "Built reusable, responsive UI components following current React and Next.js practices.",
       "Integrated REST APIs, authentication flows and protected routes, with state managed in Redux Toolkit.",
       "Worked in Agile sprints with backend, QA, design and product, tracking work in Jira and reviewing code in Bitbucket.",
       "Tracked down complex frontend issues and improved performance across the portals.",
     ],
-    stack: ["Next.js", "React", "TypeScript", "Redux Toolkit", "Tailwind CSS", "REST APIs"],
+    stack: ["Next.js", "React", "TypeScript", "Redux Toolkit", "Tailwind CSS", "Stripe", "REST APIs"],
   },
   {
     period: "Feb 2026 — Apr 2026",
@@ -156,6 +157,24 @@ export const caseStudies = [
   },
   {
     index: "B",
+    title: "Second Opinion Radiology",
+    kind: "Patient portal for a UK radiology service",
+    context: "31 Green · Patient portal frontend",
+    intro:
+      "A service where patients get an existing scan re-read by a named subspecialist consultant. I'm the main contributor to the patient portal, from booking and payment to scan upload and case tracking.",
+    modules: [
+      ["Booking flow", "Two steps (details and payment, then upload), guest checkout, options preselected from links, booking for someone else or a child, and an 18+ age check."],
+      ["Stripe payments", "Stripe Elements, with the booking kept intact across payment redirects and failed payments, plus add-on scans."],
+      ["Scan upload", "Direct upload, or through the RAD-X PACS upload page."],
+      ["Case tracking", "Patient dashboard, case details, report download, and paid cases that still need scans."],
+      ["Account & security", "International phone field, referral codes and automatic sign-out after inactivity, with a countdown."],
+      ["Analytics", "Google Tag Manager, including purchase events."],
+    ],
+    stack: ["React", "TypeScript", "Tailwind CSS", "Stripe"],
+    url: "https://secondopinionradiology.co.uk",
+  },
+  {
+    index: "C",
     title: "Lead Finder",
     kind: "Zoho Marketplace extension",
     context: "Zenith Innovations · Frontend Developer",
@@ -170,7 +189,7 @@ export const caseStudies = [
     stack: ["React", "Context API", "Zoho CRM"],
   },
   {
-    index: "C",
+    index: "D",
     title: "Preplify",
     kind: "AI interview assistant",
     context: "Frontend UI",

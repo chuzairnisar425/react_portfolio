@@ -63,11 +63,19 @@ function CaseFiles() {
                 </motion.div>
               ))}
             </dl>
-            <ul className="tags tags--paper" aria-label="Technologies">
-              {cs.stack.map((s) => (
-                <li key={s}>{s}</li>
-              ))}
-            </ul>
+            <div className="case__foot">
+              <ul className="tags tags--paper" aria-label="Technologies">
+                {cs.stack.map((s) => (
+                  <li key={s}>{s}</li>
+                ))}
+              </ul>
+              {cs.url && (
+                <a href={cs.url} target="_blank" rel="noopener noreferrer" className="link-underline case__link">
+                  Visit site <Arrow />
+                  <span className="sr-only">(opens in a new tab)</span>
+                </a>
+              )}
+            </div>
           </motion.article>
         </AnimatePresence>
       </div>

@@ -477,13 +477,6 @@ a:hover > .arrow {
   margin-bottom: 0.18em;
 }
 
-.hero__first::after {
-  content: "";
-  width: 2.2em;
-  height: 2px;
-  background: var(--ink);
-}
-
 .hero__line {
   white-space: nowrap;
   display: flex;
@@ -1709,7 +1702,7 @@ a:hover > .arrow {
 
   .hero__portrait {
     order: 2;
-    justify-self: start;
+    justify-self: center;
     max-width: 82%;
   }
 
@@ -1924,5 +1917,186 @@ a:hover > .arrow {
   *::before,
   *::after {
     transition-duration: 0.01ms !important;
+  }
+}
+
+.case__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 24px;
+}
+
+.case__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ---------- Contact form dialog ---------- */
+
+.dialog {
+  width: min(620px, calc(100% - 32px));
+  max-height: calc(100dvh - 32px);
+  padding: 0;
+  border: 0;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 14px 14px 0 var(--signal);
+  overflow: auto;
+  --line: rgba(20, 20, 18, 0.16);
+  --muted: #5f5b53;
+}
+
+.dialog::backdrop {
+  background: rgba(20, 20, 18, 0.78);
+}
+
+.dialog[open] {
+  animation: dialog-in 0.4s var(--ease);
+}
+
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+.dialog__panel {
+  position: relative;
+  padding: clamp(24px, 4vw, 44px);
+}
+
+.dialog__close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.dialog__close:hover {
+  border-color: var(--ink);
+}
+
+.dialog__eyebrow {
+  color: var(--signal);
+}
+
+.dialog__title {
+  margin-top: 12px;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 750;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.dialog__title em {
+  color: var(--signal);
+}
+
+.dialog__text {
+  margin: 16px 0 28px;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.form {
+  display: grid;
+  gap: 22px;
+  margin-top: 28px;
+}
+
+.form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.form__trap {
+  position: absolute;
+  left: -9999px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field__label {
+  color: var(--muted);
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  font: inherit;
+  font-size: 17px;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  border-bottom: 1.5px solid var(--line);
+  border-radius: 0;
+  padding: 8px 0 10px;
+  transition: border-color 0.3s;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.5;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-bottom-color: var(--signal);
+}
+
+.field textarea::placeholder {
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+.form__error {
+  padding: 12px 14px;
+  border-left: 3px solid var(--signal);
+  background: var(--paper-2);
+  font-size: 15px;
+}
+
+.form__error a {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 20px;
+}
+
+.form__actions .btn:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.form__note {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 560px) {
+  .form__row {
+    grid-template-columns: 1fr;
+  }
+
+  .dialog {
+    box-shadow: 8px 8px 0 var(--signal);
   }
 }

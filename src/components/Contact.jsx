@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { profile, socials } from "../data/content";
 import { Arrow, Reveal } from "./ui";
+import { ContactDialog } from "./ContactDialog";
 
 const channels = [
   { label: "Phone", value: profile.phone, href: `tel:${profile.phoneHref}` },
@@ -11,6 +12,7 @@ const channels = [
 
 export function Contact() {
   const [copied, setCopied] = useState(false);
+  const [formOpen, setFormOpen] = useState(false);
 
   const copy = async () => {
     try {
@@ -50,9 +52,9 @@ export function Contact() {
                 {profile.email}
               </a>
               <div className="contact__actions">
-                <a href={`mailto:${profile.email}`} className="btn btn--signal">
+                <button className="btn btn--signal" onClick={() => setFormOpen(true)} aria-haspopup="dialog">
                   Send an email <Arrow />
-                </a>
+                </button>
                 <button className="btn btn--line" onClick={copy}>
                   <AnimatePresence mode="wait" initial={false}>
                     <motion.span
@@ -96,6 +98,7 @@ export function Contact() {
           </Reveal>
         </div>
       </div>
+      <ContactDialog open={formOpen} onClose={() => setFormOpen(false)} />
     </section>
   );
 }
