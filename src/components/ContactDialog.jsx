@@ -2,15 +2,15 @@ import { useEffect, useRef, useState } from "react";
 import { profile } from "../data/content";
 import { Arrow } from "./ui";
 
-// Submissions go to Netlify Forms. The matching hidden form in index.html
-// lets Netlify detect the "contact" form at deploy time.
-const FORM_NAME = "contact";
+// Messages are sent by netlify/functions/contact.mjs, which emails them through Resend.
+const ENDPOINT = "/api/contact";
 const empty = { name: "", email: "", message: "", "bot-field": "" };
 
 export function ContactDialog({ open, onClose }) {
   const ref = useRef(null);
   const [data, setData] = useState(empty);
-  const [status, setStatus] = useState("idle"); // idle | sending | sent | error
+  const [status, setStatus] = useState("idle"); // idle | sending | sent | error | invalid
+  const [problem, setProblem] = useState("");
 
   useEffect(() => {
     const dialog = ref.current;
@@ -32,14 +32,20 @@ export function ContactDialog({ open, onClose }) {
   const submit = async (e) => {
     e.preventDefault();
     setStatus("sending");
+    setProblem("");
     try {
-      const res = await fetch("/", {
+      const res = await fetch(ENDPOINT, {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({ "form-name": FORM_NAME, ...data }).toString(),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
       });
-      if (!res.ok) throw new Error(`Status ${res.status}`);
-      setStatus("sent");
+      if (res.ok) return setStatus("sent");
+      const body = await res.json().catch(() => ({}));
+      if (res.status === 400 && body.error) {
+        setProblem(body.error);
+        return setStatus("invalid");
+      }
+      setStatus("error");
     } catch {
       setStatus("error");
     }
@@ -76,13 +82,7 @@ export function ContactDialog({ open, onClose }) {
               Write to <em>Uzair</em>
             </h2>
 
-            <form
-              name={FORM_NAME}
-              method="POST"
-              onSubmit={submit}
-              className="form"
-            >
-              <input type="hidden" name="form-name" value={FORM_NAME} />
+            <form onSubmit={submit} className="form">
               <p className="form__trap" aria-hidden="true">
                 <label>
                   Leave this empty
@@ -113,6 +113,9 @@ export function ContactDialog({ open, onClose }) {
                 />
               </label>
 
+              {status === "invalid" && (
+                <p className="form__error" role="alert">{problem}</p>
+              )}
               {status === "error" && (
                 <p className="form__error" role="alert">
                   The message couldn&apos;t be sent just now. Please email me directly at{" "}
